@@ -12,7 +12,7 @@ catch (PDOException $e)
 }
 /*var_dump(mysqli_error($db));*/
 function __autoload($className){
-		require('model/'.$className.'.class.php');
+	require('model/'.$className.'.class.php');
 }
 
 $error = "";
