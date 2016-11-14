@@ -20,12 +20,9 @@ $error404 = "";
 $page = "home";
 $access = ["home", "portfolio", "contact", "career", "sweethome", "fcostwald"];
 
-if(isset($_SESSION["admin"]))
+if(isset($_SESSION["admin"]) && (isset($_GET["page"]) && in_array($_GET["page"], $accessAdmin)))
 {
-	if(isset($_GET["page"]) && in_array($_GET["page"], $accessAdmin))
-	{
-		$page = $_GET["page"];
-	}
+	$page = $_GET["page"];
 }
 else if(isset($_GET["page"]) && in_array($_GET["page"], $access))
 {
