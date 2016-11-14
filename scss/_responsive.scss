@@ -1,0 +1,26 @@
+@media only screen and (max-width: 640px) {
+	.creations{
+		#creation-1, #creation-2, #creation-3{
+			display: block;
+			margin: 0 auto;
+			h3{
+				font-size: 1rem;
+			}
+			img{
+				width: 100%;
+				box-shadow: 2px 5px 3px 2px gray;
+				-webkit-box-shadow: 2px 5px 3px 2px gray;
+				-moz-box-shadow: 2px 5px 3px 2px gray;
+				&:hover{
+					@include transform(rotateX(0deg));
+				}
+			}
+		}
+		#creation-1 img{
+			@include radius(8px);
+			&:hover{
+				@include radius(8px);
+			}
+		}
+	}
+}

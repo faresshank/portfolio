@@ -111,7 +111,7 @@
 		}
 	}
 	.description-fco{
-		background: #007B00;
+		background: $fcoColor;
 	}
 /********************************************************************************\
 				CONTEXTE
@@ -171,11 +171,11 @@
 			h3{
 				display: block;
 				width: 100%;
-				color: #007B00;
-				border-color: #007B00;
+				color: $fcoColor;
+				border-color: $fcoColor;
 			}
 			p{
-				color: #000;
+				color: #222;
 			}
 			img{
 				max-width: 50%;
@@ -239,7 +239,7 @@
 			padding: 6% 4%;
 			width: 400px;
 			height: 400px;
-			background: #113057;
+			background: $sweetColor;
 		}
 	}
 /********************************************************************************\

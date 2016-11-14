@@ -8,8 +8,13 @@
 	}
 	h3{
 		padding-bottom: 5%;
-		color: #113057 !important;
 		font-size: 30px;
+	}
+	.memory-sweet{
+		color: $sweetColor;
+	}
+	.memory-fco{
+		color: $fcoColor;
 	}
 	.polaroid1:hover, .polaroid2:hover, .polaroid3:hover{
 		cursor: pointer;

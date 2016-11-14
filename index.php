@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 require('config/config_db.php');
 try
 {
@@ -9,7 +9,7 @@ catch (PDOException $e)
 {
 	header("Location: index.php?page=home");
 	exit;
-}
+}*/
 /*var_dump(mysqli_error($db));*/
 function __autoload($className){
 	require('model/'.$className.'.class.php');
@@ -28,7 +28,6 @@ else if(isset($_GET["page"]) && in_array($_GET["page"], $access))
 {
 	$page = $_GET["page"];
 }
-
 
 $traitementList = ["contact"];
 

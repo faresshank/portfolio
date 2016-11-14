@@ -67,48 +67,49 @@
 	}
 
 	var fade = document.getElementById('fade');
-	fade.onclick = function(e){
-		fade.classList.remove('isShowing');
-		fade.classList.add('isFade');
-		if(zoom1.classList.contains('isShowing')){
-			zoom1.classList.remove('isShowing');
-			zoom1.classList.add('isFade');
-		}
-		else if(zoom2.classList.contains('isShowing')){
-			zoom2.classList.remove('isShowing');
-			zoom2.classList.add('isFade');
-		}
-		else if(zoom3.classList.contains('isShowing')){
-			zoom3.classList.remove('isShowing');
-			zoom3.classList.add('isFade');
-		}
-	}
-	/*var polaroid1 = document.getElementById('polaroid1');*/
-	polaroid1.onclick = function(e){
-		var zoom1 = document.getElementById('zoom1');
-		if(zoom1.classList.contains('isFade')){
-			console.log('zoom1');
-			zoom1.classList.remove('isFade');
-			zoom1.classList.add('isShowing');
-			fade.classList.add('isShowing');
+	if(fade){
+		fade.onclick = function(e){
+			fade.classList.remove('isShowing');
+			fade.classList.add('isFade');
+			if(zoom1.classList.contains('isShowing')){
+				zoom1.classList.remove('isShowing');
+				zoom1.classList.add('isFade');
+			}
+			else if(zoom2.classList.contains('isShowing')){
+				zoom2.classList.remove('isShowing');
+				zoom2.classList.add('isFade');
+			}
+			else if(zoom3.classList.contains('isShowing')){
+				zoom3.classList.remove('isShowing');
+				zoom3.classList.add('isFade');
+			}
 		}
 	}
-	polaroid2.onclick = function(e){
-		var zoom2 = document.getElementById('zoom2');
-		if(zoom2.classList.contains('isFade')){
-			console.log('zoom2');
-			zoom2.classList.remove('isFade');
-			zoom2.classList.add('isShowing');
-			fade.classList.add('isShowing');
+	var polaroid1 = document.getElementById('polaroid1');
+	if(polaroid1){
+		polaroid1.onclick = function(e){
+			var zoom1 = document.getElementById('zoom1');
+			if(zoom1.classList.contains('isFade')){
+				zoom1.classList.remove('isFade');
+				zoom1.classList.add('isShowing');
+				fade.classList.add('isShowing');
+			}
 		}
-	}
-	polaroid3.onclick = function(e){
-		var zoom3 = document.getElementById('zoom3');
-		if(zoom3.classList.contains('isFade')){
-			console.log('zoom3');
-			zoom3.classList.remove('isFade');
-			zoom3.classList.add('isShowing');
-			fade.classList.add('isShowing');
+		polaroid2.onclick = function(e){
+			var zoom2 = document.getElementById('zoom2');
+			if(zoom2.classList.contains('isFade')){
+				zoom2.classList.remove('isFade');
+				zoom2.classList.add('isShowing');
+				fade.classList.add('isShowing');
+			}
+		}
+		polaroid3.onclick = function(e){
+			var zoom3 = document.getElementById('zoom3');
+			if(zoom3.classList.contains('isFade')){
+				zoom3.classList.remove('isFade');
+				zoom3.classList.add('isShowing');
+				fade.classList.add('isShowing');
+			}
 		}
 	}
 	/*
