@@ -37,8 +37,7 @@
 			$object = $post->getObject();
 			$message = $post->getMessage();
 
-			$query = "INSERT INTO 
-			contact (name, firstname, mail, object, message)
+			$query = "INSERT INTO contact (name, firstname, mail, object, message)
 			VALUES('".$name."', '".$firstname."','".$mail."','".$object."','".$message."')";
 			$res = $this->db->exec($query);
 			/*var_dump($query);*/

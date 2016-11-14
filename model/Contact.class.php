@@ -1,5 +1,5 @@
 <?php 
-// Définition de la classe Article
+// Définition de la classe Contact
 	class Contact
 	{
 		// Propriétés
