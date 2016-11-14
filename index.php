@@ -27,13 +27,11 @@ if(isset($_SESSION["admin"]))
 		$page = $_GET["page"];
 	}
 }
-else
+else if(isset($_GET["page"]) && in_array($_GET["page"], $access))
 {
-	if(isset($_GET["page"]) && in_array($_GET["page"], $access))
-	{
-		$page = $_GET["page"];
-	}
+	$page = $_GET["page"];
 }
+
 
 $traitementList = ["contact"];
 
