@@ -1,0 +1,61 @@
+<div class="form-contacter">
+
+	<div class="contact-paper" id="contact-paper">
+		<form class="form-contact" method="POST" > <!-- autocomplete="off" -->
+			<div class="error"><?= htmlentities($error) ?></div>
+
+			<div class="form-align">
+				<label for="name">Nom*</label>
+				<input type="text" name="name" id="name" value="<?= htmlentities($name) ?>">
+			</div>
+
+			<div class="form-align">
+				<label for="firstname">Prénom*</label>
+				<input type="text" name="firstname" id="firstname" value="<?= $firstname ?>">
+			</div>
+
+			<div class="form-align">
+				<label for="mail">Mail*</label>
+				<input type="email" name="mail" id="mail" value="<?= $mail ?>">
+			</div>
+
+			<div class="form-align">
+				<label for="object">Objet*</label>
+				<input type="text" name="object" id="object" value="<?= $object ?>">
+			</div>
+			<div class="form-align">
+				<label for="message">Message*</label>
+				<textarea name="message" id="message"><?= $message ?></textarea>
+			</div>
+
+			<div class="submit">
+				<button id="contact-send" type="submit" name="post">ENVOYER</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="tesst contact-top" id="contact-top"><img src="assets/images/contact/top.png"></div>
+	<div class="tesst contact-background"><img src="assets/images/contact/background.png"></div>
+	<div class="tesst contact-bottom">
+		<img src="assets/images/contact/bottom.png">
+		<div class="mail">faress5@hotmail.com</div>
+	</div>
+<div class="stamp" id="stamp">
+	<div class="stamp-red">Envoyé</div>
+	<!-- <div class="stamp-bigcircle">
+		<div class="stamp-littlecircle">
+			<span class="letter-position t">T</span>
+			<span class="letter-position h">H</span>
+			<span class="letter-position a">A</span>
+			<span class="letter-position n">N</span>
+			<span class="letter-position k">K</span>
+			<span class="letter-position y">Y</span>
+			<span class="letter-position o">O</span>
+			<span class="letter-position u">U</span>
+		</div>
+		<div class="stamp-send">ENVOYÉ</div>
+		<div class="stamp-date"><?= $date?></div>
+
+	</div> -->
+</div>
+</div>

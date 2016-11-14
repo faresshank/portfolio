@@ -1,0 +1,16 @@
+.form-contacter {
+  border: 1px solid green;
+  width: 100%;
+  height: auto;
+  /*.contact-background{}
+	.contact-top{}
+	.contact-bottom{}
+	.contact-paper{}*/
+}
+
+.form-contacter .tesst {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: blue;
+}

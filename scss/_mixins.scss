@@ -1,0 +1,83 @@
+/********************************************************\
+            VENDOR PREFIX
+\********************************************************/
+@mixin prefixes($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+}
+@mixin radius($radius){
+	border-radius: $radius;
+	@include prefixes(border-radius, $radius);
+}
+@mixin transform($value){
+	transform: $value;
+	@include prefixes(transform, $value);
+}
+/*@mixin boxShadow($x, $y, $blur, $distane, $color){
+	box-shadow: $x $y $blur $distane $color;
+	@include prefixes(box-shadow, $x $y $blur $distane $color);
+}*/
+/********************************************************\
+            X BUTTON SIDEBAR
+\********************************************************/
+@mixin ics-side($inclin){
+	transition-duration: 0.6s;
+	position: absolute;
+	right: -100%;
+	top: -60%;
+	width: 100%;
+	height: 2px;
+	@include radius(5px);
+	@include transform(rotate($inclin));
+	/*transform: rotate($inclin);*/
+	display: inline-block;
+	background: #FFF;
+}
+/********************************************************\
+            BLOCK EVENT CAREER
+\********************************************************/
+
+@mixin event-title{
+	background: #34495E;
+	display: inline-block;
+	width: 100%;
+	height: 45px;
+	padding: 4%;
+}
+@mixin event-square($color){
+	background: $color;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	padding: 4%;
+}
+@mixin event-line($color){
+	background: $color;
+	position: absolute;
+	top: 20px;
+	height: 2px;
+	width: 150px;
+}
+@mixin event-circle($color){
+	background: $color;
+	position: absolute;
+	top: 15px;
+	right: -155px;
+	@include radius(50%);
+	width: 13px;
+	height: 13px;
+}
+
+@mixin event-date($color){
+	color: $color;
+	position: absolute;
+	top: -10px;
+	right: -135px;
+	font-size: 25px;
+}

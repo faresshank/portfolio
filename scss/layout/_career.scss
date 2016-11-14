@@ -1,0 +1,232 @@
+.career{
+	position: relative;
+	width: 100%;
+	background: url('../images/career/point.png') center;
+	background-repeat: repeat-y;
+	height: $careerEventTop * 9;
+	.event{
+		position: absolute;
+		left: 50%;
+		width: 300px;
+		text-align: left;
+		color: #FFF;
+		/*@include boxShadow(0px, 0px, 15px, 5px, blue);*/
+		box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
+		-webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
+		h3, p{
+			margin: 0;
+		}
+		.body{
+			background: #FFF;
+			padding: 10px;
+			color: gray;
+		}
+	}
+/********************************************************\
+            BLOCKS EVENTS
+\********************************************************/
+	.first{
+		/* ALIGNÉ À GAUGHE */
+		margin-top: $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($first);
+			}
+			.line{
+				@include event-line($first);
+				right: -150px;
+			}
+			.circle{
+				@include event-circle($first);
+			}
+			.date{
+				@include event-date($first);
+			}
+		}
+	}
+	.second{
+		/* ALIGNÉ À DROITE */
+		margin-top: 2 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($second);
+			}
+			.line{
+				@include event-line($second);
+				left: -150px;
+			}
+			.circle{
+				@include event-circle($second);
+				left: -155px;
+			}
+			.date{
+				@include event-date($second);
+				left: -135px;
+			}
+		}
+	}
+	.third{
+		/* ALIGNÉ À GAUGHE */
+		margin-top: 3 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($third);
+			}
+			.line{
+				@include event-line($third);
+				right: -150px;
+			}
+			.circle{
+				@include event-circle($third);
+			}
+			.date{
+				@include event-date($third);
+			}
+		}
+	}
+	.fourth{
+		/* ALIGNÉ À DROITE */
+		margin-top: 4 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($fourth);
+			}
+			.line{
+				@include event-line($fourth);
+				left: -150px;
+			}
+			.circle{
+				@include event-circle($fourth);
+				left: -155px;
+			}
+			.date{
+				@include event-date($fourth);
+				left: -135px;
+			}
+		}
+	}
+	.fifth{
+		/* ALIGNÉ À GAUGHE */
+		margin-top: 5 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($fifth);
+			}
+			.line{
+				@include event-line($fifth);
+				right: -150px;
+			}
+			.circle{
+				@include event-circle($fifth);
+			}
+			.date{
+				@include event-date($fifth);
+			}
+		}
+	}
+	.sixth{
+		/* ALIGNÉ À DROITE */
+		margin-top: 6 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($sixth);
+			}
+			.line{
+				@include event-line($sixth);
+				left: -150px;
+			}
+			.circle{
+				@include event-circle($sixth);
+				left: -155px;
+			}
+			.date{
+				@include event-date($sixth);
+				left: -135px;
+			}
+		}
+	}
+	.seventh{
+		/* ALIGNÉ À GAUGHE */
+		margin-top: 7 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square($seventh);
+			}
+			.line{
+				@include event-line($seventh);
+				right: -150px;
+			}
+			.circle{
+				@include event-circle($seventh);
+			}
+			.date{
+				@include event-date($seventh);
+			}
+		}
+	}
+	.eighth{
+		/* ALIGNÉ À DROITE */
+		margin-top: 8 * $careerEventTop;
+		.top{
+			position: relative;
+			.title{
+				@include event-title;
+			}
+			.square{
+				@include event-square(#16a085);
+			}
+			.line{
+				@include event-line(#16a085);
+				left: -150px;
+			}
+			.circle{
+				@include event-circle(#16a085);
+				left: -155px;
+			}
+			.date{
+				@include event-date(#16a085);
+				left: -135px;
+			}
+		}
+	}
+/********************************************************\
+            ALIGNEMENT
+\********************************************************/
+	.left{
+		position: absolute;
+		transform: translate(-449px, 0);
+	}
+	.right{
+		position: absolute;
+		transform: translate(148px, 0);
+	}
+}

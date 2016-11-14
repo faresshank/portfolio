@@ -1,0 +1,45 @@
+.lightbox{
+	margin-top: 5%;
+	width: 95%;
+	text-align: center;
+	img{
+		max-height: 85%;
+		animation: show 0.8s;
+	}
+	h3{
+		padding-bottom: 5%;
+		color: #113057 !important;
+		font-size: 30px;
+	}
+	.polaroid1:hover, .polaroid2:hover, .polaroid3:hover{
+		cursor: pointer;
+	}
+	.polaroid1{
+		@include transform(rotate(-20deg));
+	}
+	.polaroid3{
+		@include transform(rotate(20deg));
+	}
+	.isFade{
+		display: none;
+	}
+	.isShowing{
+		z-index:1005;
+		display: inline-block;
+		position: fixed;
+		top: 10%;
+		left: 10%;
+		width: 80%;
+	}
+	.black-overlay{
+		z-index:1004;
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		animation: smooth 0.8s;
+		background-color: black;
+		opacity: 0.9;
+	}
+}

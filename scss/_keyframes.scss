@@ -1,0 +1,65 @@
+/********************************************************\
+            SVG FINGER HOME
+\********************************************************/
+    @keyframes finger{
+        0%{
+            @include transform(scale(1));
+        }
+        50%{
+            @include transform(scale(1.2));
+        }
+        100%{
+            @include transform(scale(1.1));
+        }
+    }
+/********************************************************\
+            BUTTON OPEN SIDEBAR
+\********************************************************/
+@keyframes mid{
+    0%   {left: 4%;}
+    25%  {left: -25%; width: 60%;}
+    100% {left: 50%; opacity: 0;}
+}
+@keyframes top{
+    0%   {left: 4%; top: 20%; /*transform: rotate(-20deg);*/ @include transform(rotate(-20deg));}
+    25%  {left: 50%; top:0%;}
+    100% {left: 1%; top: 19%; /*transform: rotate(42deg);*/ @include transform(rotate(42deg)); width: 90%;}
+}
+@keyframes bot{
+    0%   {left: 4%; top: 80%; /*transform: rotate(20deg);*/ @include transform(rotate(20deg));}
+    25%  {left: 50%; top:100%;}
+    100% {left: 1%; top: 78%; /*transform: rotate(-42deg);*/ @include transform(rotate(-42deg)); width: 90%;}
+}
+/********************************************************\
+            BUTTON CLOSE SIDEBAR
+\********************************************************/
+@keyframes moveL{
+    0%   {left: -100%; top: -60%;}
+    25%  {left:   20%; top:  55%;}
+    50%  {left:   -5%; top:  30%;}
+    100% {left:    3%; top:  45%;}
+}
+@keyframes moveR{
+    0%   {right: -100%; top: -60%;}
+    25%  {right:   20%; top:  55%;}
+    50%  {right:   -5%; top:  30%;}
+    100% {right:    3%; top:  45%;}
+}
+/********************************************************\
+            BUTTON SUBMIT CONTACT
+\********************************************************/
+@keyframes rotation{
+    0%   {}
+    100% {/*transform: rotate(1600deg);*/ @include transform(rotate(1600deg)); width: 5%; height: 5%; font-size: 0; opacity: 0;}
+}
+/********************************************************\
+            POLAROID FCO+SWEETHOME
+\********************************************************/
+@keyframes show{
+    0%   {/*transform : rotate(0deg);*/ @include transform(rotate(0deg)); width: 0%;}
+    100% {/*transform : rotate(360deg);*/ @include transform(rotate(360deg)); width: 80%;}
+}
+@keyframes smooth{
+    0%   {opacity: 0;}
+    100% {opacity: 0.9;}
+}

@@ -1,0 +1,208 @@
+.sidebar{
+	z-index: 3000;
+	width: $sideWidth;
+	position: fixed;
+	top: 0;
+	left: -21%;
+	bottom: 0;
+	padding: 3%; 
+	padding-top: 200px;
+	transition-duration: 0.8s;
+	.menu{
+	    z-index: 21;
+	    position: absolute;
+	    top: 3%;
+		right: -80px;
+	    width: 45px;
+	    height: 45px;
+	    text-align: center;
+	    overflow: hidden;
+	    cursor: pointer;
+		.line{
+		    position: absolute;
+		    left: 4%;
+		    width: 90%;
+		    height: 2px;
+		    background: orange;
+		}
+		#top{top: 20%;}
+		#mid{top: 50%;}
+		#bot{top: 80%;}
+	}
+		.menu:hover #top{animation: top 0.5s forwards;}
+		.menu:hover #mid{animation: mid 0.5s forwards;}
+		.menu:hover #bot{animation: bot 0.5s forwards;}
+	.ics{
+		z-index: 21;
+		position: absolute;
+		width: 45px;
+		height: 45px;
+		right: 3%;
+		top: 7%;
+		text-align: center;
+		cursor: pointer;
+		overflow: hidden;
+		&:hover .move-l, &:hover .move-r{
+			background: orange;
+		}
+		.ics-l{
+			@include ics-side(45deg);
+
+		}
+		.ics-r{
+			@include ics-side(-45deg);
+		}
+	}
+	.move-l{
+		animation: moveL 1s forwards;
+		animation-delay: 1s;	
+	}
+	.move-r{
+		animation: moveR 1s forwards;
+		animation-delay: 1s;
+	}
+	.quit-l{
+		animation: quitL 0s forwards;
+		animation-delay: 0s;
+	}
+	.quit-r{
+		animation: quitR 0s forwards;
+		animation-delay: 0s;	
+	}
+	.links{
+		position: relative;
+		z-index: 20;
+		text-align: center;
+		p{	color: black;
+			font-family: $paraFont;
+			font-size: 50px;
+		}
+		a{	color: white;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition-duration: 0.6s;
+			&:hover{
+			color: orange;
+			}
+		}
+	}
+	.back-transparent{
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: black;
+		opacity: 0.9;
+	}
+/*	.c-hamburger {
+		z-index: 5;
+		position: absolute;
+		top: 0;
+		right: -50px;
+		display: block;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		width: 60px;
+		height: 60px;
+		font-size: 0;
+		text-indent: -9999px;
+		appearance: none;
+		box-shadow: none;
+		border-radius: none;
+		border: none;
+		cursor: pointer;
+		transition: background 0.5s;
+	}
+.c-hamburger:focus {
+  outline: none;
+}
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 18px;
+  right: 10px;
+  height: 5px;
+  background: white;
+  @include radius(5px);
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: orange;
+  content: "";
+}
+
+.c-hamburger span::before {
+  @include radius(5px);
+  top: -10px;
+}
+
+.c-hamburger span::after {
+  @include radius(5px);
+  bottom: -10px;
+}
+.c-hamburger--htx {
+  background-color: none;
+}
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+  background: orange;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+
+.c-hamburger--htx.is-active {
+  background-color: none;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.1s;
+}*/
+}
+.show-sidebar{
+	display: block;
+	left: 0;
+	width: 100%;
+	background: gray;
+}
+.show-links{
+	display: none;
+}
