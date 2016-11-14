@@ -40,8 +40,5 @@
 		else{
 			$error = "Veuillez remplir tout les champs";
 		}
-
 	}
-
-
 ?>
