@@ -1,10 +1,4 @@
 <?php
-	$name = "";
-	$firstname = "";
-	$mail = "";
-	$object = "";
-	$message = "";
-	
 	if(isset($_POST["post"])){
 		$name = $_POST['name'];
 		$firstname = $_POST['firstname'];

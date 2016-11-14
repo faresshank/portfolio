@@ -11,21 +11,21 @@
 
 			<div class="form-align">
 				<label for="firstname">Prénom*</label>
-				<input type="text" name="firstname" id="firstname" value="<?= $firstname ?>">
+				<input type="text" name="firstname" id="firstname" value="<?= htmlentities($firstname) ?>">
 			</div>
 
 			<div class="form-align">
 				<label for="mail">Mail*</label>
-				<input type="email" name="mail" id="mail" value="<?= $mail ?>">
+				<input type="email" name="mail" id="mail" value="<?= htmlentities($mail) ?>">
 			</div>
 
 			<div class="form-align">
 				<label for="object">Objet*</label>
-				<input type="text" name="object" id="object" value="<?= $object ?>">
+				<input type="text" name="object" id="object" value="<?= htmlentities($object) ?>">
 			</div>
 			<div class="form-align">
 				<label for="message">Message*</label>
-				<textarea name="message" id="message"><?= $message ?></textarea>
+				<textarea name="message" id="message"><?= htmlentities($message) ?></textarea>
 			</div>
 
 			<div class="submit">
