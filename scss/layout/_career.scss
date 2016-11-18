@@ -1,3 +1,7 @@
+h2{
+	text-align: center;
+	color: $textColor;
+}
 .career{
 	position: relative;
 	width: 100%;
@@ -10,10 +14,14 @@
 		width: 300px;
 		text-align: left;
 		color: #FFF;
+		margin: 5% 0;
 		/*@include boxShadow(0px, 0px, 15px, 5px, blue);*/
 		box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
 		-webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
 		-moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
+		p{
+			font-size: 1rem;
+		}
 		h3, p{
 			margin: 0;
 		}
@@ -23,9 +31,9 @@
 			color: gray;
 		}
 	}
-/********************************************************\
-            BLOCKS EVENTS
-\********************************************************/
+	/********************************************************\
+	            BLOCKS EVENTS
+	\********************************************************/
 	.first{
 		/* ALIGNÉ À GAUGHE */
 		margin-top: $careerEventTop;
@@ -51,7 +59,7 @@
 	}
 	.second{
 		/* ALIGNÉ À DROITE */
-		margin-top: 2 * $careerEventTop;
+		margin-top: 2.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{
@@ -76,7 +84,7 @@
 	}
 	.third{
 		/* ALIGNÉ À GAUGHE */
-		margin-top: 3 * $careerEventTop;
+		margin-top: 3.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{
@@ -99,7 +107,7 @@
 	}
 	.fourth{
 		/* ALIGNÉ À DROITE */
-		margin-top: 4 * $careerEventTop;
+		margin-top: 4.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{
@@ -124,7 +132,7 @@
 	}
 	.fifth{
 		/* ALIGNÉ À GAUGHE */
-		margin-top: 5 * $careerEventTop;
+		margin-top: 5.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{
@@ -147,7 +155,7 @@
 	}
 	.sixth{
 		/* ALIGNÉ À DROITE */
-		margin-top: 6 * $careerEventTop;
+		margin-top: 6.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{
@@ -172,7 +180,7 @@
 	}
 	.seventh{
 		/* ALIGNÉ À GAUGHE */
-		margin-top: 7 * $careerEventTop;
+		margin-top: 7.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{
@@ -195,7 +203,7 @@
 	}
 	.eighth{
 		/* ALIGNÉ À DROITE */
-		margin-top: 8 * $careerEventTop;
+		margin-top: 8.5 * $careerEventTop;
 		.top{
 			position: relative;
 			.title{

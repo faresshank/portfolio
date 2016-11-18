@@ -3,7 +3,7 @@
 require('config/config_db.php');
 try
 {
-    $db = new PDO('mysql:dbname='.$config['bdd'].';host='.$config['host'], $config['login'], $config['password']);
+    $db = new PDO('mysql:dbname='.$config_online['bdd'].';host='.$config_online['host'], $config_online['login'], $config_online['password']);
 }
 catch (PDOException $e)
 {

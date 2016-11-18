@@ -18,13 +18,42 @@ html, body{
 body {
     opacity: 1;
     transition: 1s opacity;
+    font-family: $titleFont;
+    background: #e5e5e5;
 }
 body.fade-out {
     opacity: 0;
     transition: none;
 }
+h1{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: #333;
+	a{
+		font-weight: bold;
+		font-size: 1.4rem;
+	}
+}
+h2{
+	font-size: 3rem;
+}
+h3{
+	font-size: 2.5rem;
+}
+h4{
+	font-size: 2rem;
+}
+h5{
+	font-size: 1rem;
+	margin: 0;
+}
 p{
 	margin: 8px 0;
+	font-size: 1.5rem;
 }
 
 pre{
@@ -83,6 +112,19 @@ blockquote{
 
 .columns:last-child:not(.pull--right), .column:last-child:not(.pull--right){
 	float:left !important;
+}
+.content{
+	z-index: 1;
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #ECF0F1;
+	font-family: $titleFont;
+	font-size: 1rem;
+	text-align: center;
 }*/
 @font-face {
     font-family: fashion;

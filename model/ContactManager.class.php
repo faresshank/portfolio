@@ -9,7 +9,7 @@
 		}
 
 		private function getBy($field, $data){
-	        $query = 'SELECT * FROM contact WHERE '.$field.'='.$data ;
+	        $query = 'SELECT * FROM faress_contact WHERE '.$field.'='.$data ;
 	        
 	        $res = $this->db->query($query);
 	        $item = $res->fetchObject("Contact");
@@ -37,7 +37,7 @@
 			$object = $post->getObject();
 			$message = $post->getMessage();
 
-			$query = "INSERT INTO contact (name, firstname, mail, object, message)
+			$query = "INSERT INTO faress_contact (name, firstname, mail, object, message)
 			VALUES('".$name."', '".$firstname."','".$mail."','".$object."','".$message."')";
 			$res = $this->db->exec($query);
 			/*var_dump($query);*/

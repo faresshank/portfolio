@@ -1,5 +1,8 @@
 .creations{
 	padding-top: 2%;
+	font-family: $titleFont;
+	color: $textColor;
+	text-align: center;
 	#creation-1, #creation-2, #creation-3{
 		/*border: 1px solid orange;*/
 		margin: 1%;
@@ -10,14 +13,13 @@
 			width: 70%;
 			display: inline-block;
 			transition: all 400ms ease;
-			box-shadow: 5px 10px 25px 5px gray;
+/*			box-shadow: 5px 10px 25px 5px gray;
 			-webkit-box-shadow: 5px 10px 25px 5px gray;
-			-moz-box-shadow: 5px 10px 25px 5px gray;
+			-moz-box-shadow: 5px 10px 25px 5px gray;*/
 			filter: grayscale(90%);
 		}
 		h3{
 			font-weight: bold;
-			font-size: 20px;
 		}
 	}
 	#creation-1 img{
@@ -26,26 +28,27 @@
 		max-width: 60%;
 		&:hover{
 			@include radius(20px);
-			width: 60%;
+			width: 50%;
 			filter: grayscale(0%);
-			@include transform(rotateX(22deg));
+			/*@include transform(rotateX(22deg));*/
 			/*transform: rotateX(25deg);*/
-			box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
+			/*box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
 			-webkit-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
-			-moz-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
+			-moz-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);*/
 		}
 	}
 	 #creation-2:hover img, #creation-3:hover img{
-		width: 100%;
+		width: 80%;
 		filter: grayscale(0%);
-		@include transform(rotateX(22deg));
+		/*@include transform(rotateX(22deg));*/
 		/*transform: rotateX(22deg);*/
-		box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
+		/*box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
 		-webkit-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
-		-moz-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
+		-moz-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);*/
 	}
 }
-.content_pages{
+.content-pages{
+	text-align: center;
 	user-select :none;
 	.bold{
 		font-weight: bold;
@@ -56,17 +59,15 @@
 		padding-top: 2%;
 		font-family: $titleFont;
 		font-weight: initial;
-		font-size: 25px;
 		color: #FFF;
 	}
 	p{
 		font-family: $paraFont;
 		text-align: justify;
 	}
-/********************************************************************************\
-				PAGE SWEET + FCO
-				TITLE
-\********************************************************************************/
+	/********************************************************************************\
+					DÉCLARATIONS COMMUNES SWEET + FCO TITLE
+	\********************************************************************************/
 	.title{
 		position: relative;
 		background: #0a192c;
@@ -82,12 +83,11 @@
 		}
 		.price{
 			.cup{
-				font-size: 30px;
+				font-size: 3rem;
 				color: orange !important;
 			}
 			h2{
 				font-family: $paraFont;
-				font-size: 18px;
 			}
 		}
 	}
@@ -107,7 +107,7 @@
 		text-align: left;
 		padding: 5% 7%;
 		h3{
-			font-size: 48px;
+			/*font-size: 8rem;*/
 		}
 	}
 	.description-fco{
@@ -124,7 +124,6 @@
 			padding-bottom: 2%;
 			border-bottom: 4px solid orange;
 			width: 20%;
-			font-size: 35px;
 		}
 		p{
 			text-align: justify;
@@ -152,6 +151,20 @@
 			background: #DDD;
 			width: 80%;
 			max-width: 850px;
+			&:nth-child(odd){
+				left: 10%;
+				img{
+					position: absolute;
+					right: 5%;
+				}
+			}
+			&:nth-child(even){
+				left: -10%;
+				img{
+					position: absolute;
+					left: 5%;
+				}
+			}
 			img{
 				max-width: 40%;
 			}
@@ -189,39 +202,24 @@
 				padding: 3%;
 			}
 		}
-			.before-after{
-				/*border: 1px solid blue;*/
-				display: inline-block;
-				vertical-align: middle;
-				padding-left: 5%;
-				h3{
-					/*border: 1px solid gray;*/
-					text-align: left;
-					margin: 7% 0 0 0;
-					border: none;
-				}
-				.before, .after{
-					/*border: 1px solid orange;*/
-					img{
-						display: inline-block;
-						max-width: 70%;
-						padding: 0;
-					}
-				}
-
+		.before-after{
+			/*border: 1px solid blue;*/
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 5%;
+			h3{
+				/*border: 1px solid gray;*/
+				text-align: left;
+				margin: 7% 0 0 0;
+				border: none;
 			}
-		.context-block:nth-child(odd){
-			left: 10%;
-			img{
-				position: absolute;
-				right: 5%;
-			}
-		}
-		.context-block:nth-child(even){
-			left: -10%;
-			img{
-				position: absolute;
-				left: 5%;
+			.before, .after{
+				/*border: 1px solid orange;*/
+				img{
+					display: inline-block;
+					max-width: 70%;
+					padding: 0;
+				}
 			}
 		}
 		.align-left{

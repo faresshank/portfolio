@@ -52,7 +52,10 @@
 	        icsL.classList.add('move-l');
 	        icsR.classList.add('move-r');
 	        document.getElementById("sidebar").classList.add("show-sidebar");
-			document.getElementById("links").classList.remove("show-links");
+	        // Règle le bug d'affichage du lien "mon parcours" en responsive
+	        setTimeout(function(){
+				document.getElementById("links").classList.remove("show-links");
+			}, 160);
 	    }
 	}
 	if(ics){

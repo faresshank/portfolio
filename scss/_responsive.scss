@@ -1,25 +1,468 @@
-@media only screen and (max-width: 640px) {
+/******************************************************************************************************\
+					RESPONSIVE PORTRAIT
+\******************************************************************************************************/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait){
+/***************************************************\
+					SIDEBAR
+\***************************************************/
+	h2, h3{
+		font-size: 3rem;
+	}
+	p{
+		font-size: 2.5rem;
+	}
+	.sidebar{
+		padding-top: 100px;
+		transition-duration: 0.5s;
+		.menu{
+		    top: 2%;
+			right: -180px;
+		    width: 140px;
+		    height: 140px;
+		    /*background: #0A192C;*/
+		    .line{
+		    	left: 20%;
+		    	width: 60%;
+		    }
+		    #top{top: 27%;}
+			#mid{top: 50%;}
+			#bot{top: 73%;}
+/*		    border: 3px solid $sweetColor;*/
+		    /*border-radius: 3px;*/
+		    @include radius(8px);
+		    .line{
+		    	background: orange;
+		    	height: 5px;
+		    }
+		}
+		.ics{
+			width: 90px;
+			height: 90px;
+			top: 4%;
+		}
+		.links{
+			position: relative;
+			z-index: 20;
+			text-align: center;
+			p{
+				color: black;
+				font-family: $paraFont;
+				font-size: 50px;
+			}
+			a{
+				color: white;
+				text-transform: uppercase;
+				text-decoration: none;
+				transition-duration: 0.6s;
+				font-size: 80px;
+			}
+		}
+	}
+/***************************************************\
+					HOMEPAGE
+\***************************************************/
+	.content{
+/*		#title{
+			p{
+				font-size: 100px;
+			}
+		}
+		#enter{
+			top: -70px;
+			left: 35%;
+			svg{
+				width: 200px;
+				height: 200px;
+			}
+		}*/
+	}
+		.home{
+			.title{
+				padding-top: 40%;
+			}
+		}
+/***************************************************\
+					PAGE PORTFOLIO
+\***************************************************/
 	.creations{
+		text-align: center;
 		#creation-1, #creation-2, #creation-3{
-			display: block;
-			margin: 0 auto;
+			display: inline-block;
+			width: 100%;
+			margin: 0;
 			h3{
-				font-size: 1rem;
+				color: #444;
+				font-size: 2rem;
 			}
 			img{
-				width: 100%;
-				box-shadow: 2px 5px 3px 2px gray;
-				-webkit-box-shadow: 2px 5px 3px 2px gray;
-				-moz-box-shadow: 2px 5px 3px 2px gray;
+				width: 30%;
 				&:hover{
-					@include transform(rotateX(0deg));
+					width: 30%;
 				}
 			}
 		}
-		#creation-1 img{
-			@include radius(8px);
-			&:hover{
-				@include radius(8px);
+		#creation-2:hover img, #creation-3:hover img{
+			width: 40%;
+		}
+	}
+/***************************************************\
+				PAGE FCO + SWEETHOME
+\***************************************************/
+	.content-pages{
+		.title{
+			.price{
+				.cup{
+					font-size: 4rem;
+				}
+			}
+			img{
+				width: 70%;
+				margin-top: 5%;
+			}
+		}
+		.context{
+			.context-block{
+				display: block;
+				position: relative;
+				/*margin: 5% auto;*/
+				text-align: center;
+				vertical-align: middle;
+				background: none;
+				width: 100%;
+				/*max-width: 850px;*/
+				&:nth-child(odd){
+					left: 0%;
+					img{
+						position: absolute;
+						top: -130px;
+						right: -6%;
+					}
+				}
+				&:nth-child(even){
+					left: 0%;
+					img{
+						position: absolute;
+						top: -130px;
+						left: 65%;
+					}
+				}
+				img{
+					z-index: 100;
+				}
+				.table2{
+					display: none;
+				}
+			}
+			.align-left{
+				left: 0%;
+			}
+			.align-right{
+				right: 0%;
+			}
+			.context-side{
+				width: 100%;
+				height: 100%;
+				p{
+					padding: 5%;
+				}
+			}
+			.block-fco{
+				padding-bottom: 5%;
+				border: 3px solid #DDD;
+				margin-bottom: 5%;
+				h3{
+					display: block;
+					width: 100%;
+					color: $fcoColor;
+					border-color: $fcoColor;
+				}
+				p{
+					color: #222;
+				}
+				img{
+					max-width: 50%;
+					vertical-align: middle;
+				}
+				.fco-text{
+					display: block;
+					vertical-align: middle;
+					text-align: left;
+					width: 100%;
+					padding: 3%;
+				}
+			}
+		}
+	}
+/***************************************************\
+					CONTACT
+\***************************************************/
+/*	.form-contacter{
+		user-select :none;
+		max-width: 470px;
+		margin: 1% auto;
+		padding-top: 2%;
+		position: relative;
+		overflow: hidden;
+		.form-contact{
+			display: inline-block;
+			width: 440px;
+			background-image: url('../images/contact/paper.png');
+			border: 1px solid #DDD;
+			padding: 2% 3%;
+			text-align: left;
+			.error{
+				font-family: $titleFont;
+				position: absolute;
+				left: 20%;
+				color: red;
+			}
+	}*/
+	.form-contacter{
+		transform: scale(1);
+		margin: 10% auto;
+		overflow: initial;
+		max-width: 100%;
+		font-size: 2rem;
+		input, textarea, label, button{
+			font-size: 2.9rem;
+		}
+		label{
+			width: 260px;
+		}
+		button{
+			padding: 15px 20px;
+		}
+		.form-contact{
+			padding: 10% 0 5% 0;
+			width: 100%;
+			.error{
+				top: 8%;
+			}
+		}
+		.contact{
+			&-background{
+				/*bottom: -200px;*/
+				display: none;
+			}
+			&-top{
+				/*bottom: -205px;*/
+				display: none;
+			}
+			&-bottom{
+				img{
+					display: none;
+					/*display: block;	*/
+				}
+				.mail{
+					font-family: $titleFont;
+					color: #555;
+					text-align: center;
+					position: relative;
+					left: 0;
+					top: 0;
+				}
+			}
+			&-paper{
+				top: 10px;
+				width: 97%;
+			}
+		}
+		.stamp{
+			display: none;
+		}
+	/***************************************************\
+				ANIMATION CONTACT AU HOVER
+	\***************************************************/
+/*		&:hover .contact-top{
+			@include transform(rotateX(180deg));
+			bottom: -140px;
+			z-index: 25;
+		}
+		&:hover .contact-paper{
+			top: 400px;
+			height: 100px;
+		}
+		&:hover .stamp{
+			@include transform(scale(1));
+			opacity: 0.8;
+			top: 500px;
+		}*/
+	/***************************************************\
+				ANIMATION CONTACT AU CLIQUE
+	\***************************************************/
+		.play-contact-top{
+			@include transform(rotateX(180deg));
+			bottom: -140px;
+			z-index: 25 !important;
+		}
+		.play-contact-paper{
+			top: 400px;
+			height: 100px;
+		}
+		.play-stamp{
+			@include transform(scale(1));
+			opacity: 0.8;
+			top: 500px;
+		}
+	}
+	/***************************************************\
+						MON PARCOURS
+	\***************************************************/
+	.career{
+		background: none;
+		.event{
+			width: 90%;
+			h3, p, li{
+				font-size: 2rem;
+			}
+			.body{
+				background: #FFF;
+				/*padding: 20px;*/
+				color: gray;
+			}
+		}
+		.first{
+			margin-top: 140px;
+		}
+		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
+			.top{
+				.title{
+					height: 80px;
+					padding: 2%;
+				}
+				.square{
+					padding: 2%;
+					top: 10px;
+					right: 10px;
+					width: 80px;
+					height: 80px;
+					p{
+						font-size: 2rem;
+					}
+				}
+				.line{
+					display: none;
+				}
+				.circle{
+					display: none;
+				}
+				.date{
+					left: 550px;
+					top: 20px;
+					right: 0;
+					p{
+						font-size: 1.6rem;
+					}
+				}
+				
+			}
+		}
+
+		.left{
+			position: absolute;
+			transform: translate(-50%, 0);
+		}
+		.right{
+			position: absolute;
+			transform: translate(-50%, 0);
+		}
+	}
+}
+
+/******************************************************************************************************\
+					RESPONSIVE LANDSCAPE
+\******************************************************************************************************/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape){
+/***************************************************\
+					HOMEPAGE
+\***************************************************/
+	.content{
+		#title{
+			padding-top: 5%;
+			p{
+				font-size: 60px;
+			}
+		}
+		#enter{
+			left: 40%;
+			svg{
+				width: 150px;
+				height: 150px;
+			}
+		}
+	}
+/***************************************************\
+					SIDEBAR
+\***************************************************/
+	.sidebar{
+		padding-top: 50px;
+		.menu{
+		    top: 1%;
+			right: -100px;
+		    width: 80px;
+		    height: 80px;
+		    .line{
+		    	height: 5px;
+		    }
+		}
+		.ics{
+			top: 10%;
+		}
+		.links{
+			a{
+				font-size: 60px;
+			}
+		}
+	}
+/***************************************************\
+					PAGE PORFOLIO
+\***************************************************/
+	.creations{
+		text-align: center;
+		#creation-1, #creation-2, #creation-3{
+			display: inline-block;
+			width: 60%;
+			margin: 0;
+			img{
+				width: 30%;
+			}
+		}
+	}
+/***************************************************\
+					CONTACT
+\***************************************************/
+	.form-contacter{
+		/*transform: scale(1.5);*/
+		margin: 20% auto;
+		.contact{
+			&-background{
+				/*bottom: -200px;*/
+			}
+			&-top{
+				/*bottom: -205px;*/
+			}
+			&-bottom{
+				img{
+					display: block;	
+				}
+				.mail{
+					font-family: $titleFont;
+					color: #555;
+					position: absolute;
+					bottom: 20px;
+					left: 155px;
+				}
+			}
+			&-paper{
+				top: 5px;
 			}
 		}
 	}
