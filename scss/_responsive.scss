@@ -4,25 +4,27 @@
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 640px)
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait){
 /***************************************************\
 					SIDEBAR
 \***************************************************/
 	h2, h3{
-		font-size: 3rem;
+		font-size: 2rem;
 	}
-	p{
+	h2{
+		padding-left: 20%;
+	}
+	p, a{
 		font-size: 2.5rem;
 	}
 	.sidebar{
 		padding-top: 100px;
 		transition-duration: 0.5s;
 		.menu{
-		    top: 2%;
-			right: -180px;
-		    width: 140px;
-		    height: 140px;
+		    top: 0px;
+			right: -95px;
+		    width: 100px;
+		    height: 100px;
 		    /*background: #0A192C;*/
 		    .line{
 		    	left: 20%;
@@ -35,68 +37,46 @@
 		    /*border-radius: 3px;*/
 		    @include radius(8px);
 		    .line{
-		    	background: orange;
 		    	height: 5px;
 		    }
 		}
 		.ics{
-			width: 90px;
-			height: 90px;
+			width: 80px;
+			height: 80px;
 			top: 4%;
-		}
-		.links{
-			position: relative;
-			z-index: 20;
-			text-align: center;
-			p{
-				color: black;
-				font-family: $paraFont;
-				font-size: 50px;
-			}
-			a{
-				color: white;
-				text-transform: uppercase;
-				text-decoration: none;
-				transition-duration: 0.6s;
-				font-size: 80px;
-			}
 		}
 	}
 /***************************************************\
 					HOMEPAGE
 \***************************************************/
-	.content{
-/*		#title{
-			p{
-				font-size: 100px;
-			}
-		}
-		#enter{
-			top: -70px;
-			left: 35%;
-			svg{
-				width: 200px;
-				height: 200px;
-			}
-		}*/
-	}
 		.home{
 			.title{
 				padding-top: 40%;
+				h1{
+					font-size: 1.6rem;
+				}
+			}
+			.links{
+				a{
+					font-size: 1.6rem;
+					margin: 5%;
+				}
 			}
 		}
 /***************************************************\
 					PAGE PORTFOLIO
 \***************************************************/
+/*	.content{
+
+	}*/
 	.creations{
 		text-align: center;
 		#creation-1, #creation-2, #creation-3{
 			display: inline-block;
 			width: 100%;
 			margin: 0;
-			h3{
-				color: #444;
-				font-size: 2rem;
+			h4{
+				font-size: 1rem;
 			}
 			img{
 				width: 30%;
@@ -105,6 +85,10 @@
 				}
 			}
 		}
+		#creation-1 img{
+			@include radius(10px);
+			width: 20%;
+		}
 		#creation-2:hover img, #creation-3:hover img{
 			width: 40%;
 		}
@@ -112,115 +96,137 @@
 /***************************************************\
 				PAGE FCO + SWEETHOME
 \***************************************************/
-	.content-pages{
-		.title{
-			.price{
-				.cup{
-					font-size: 4rem;
+.content-pages{
+	h2{
+		padding-left: 0;
+	}
+	.title{
+		.price{
+			h2{
+				font-size: 1.6rem;
+			}
+			.cup{
+				font-size: 2rem;
+			}
+		}
+		img{
+			width: 70%;
+			margin-top: 5%;
+		}
+	}
+	/********************************************************************************\
+					DESCRIPTION
+	\********************************************************************************/
+	.description{
+		background: #174071;
+		text-align: left;
+		padding: 5% 7%;
+		/*h3{
+			font-size: 1rem;
+		}*/
+		p{
+			font-size: 1.2rem;
+		}
+	}
+	.description-fco{
+		background: $fcoColor;
+	}
+	/********************************************************************************\
+					CONTEXTE
+	\********************************************************************************/
+	.context{
+		.context-block{
+			display: block;
+			position: relative;
+			/*margin: 5% auto;*/
+			text-align: center;
+			vertical-align: middle;
+			background: none;
+			width: 100%;
+			/*max-width: 850px;*/
+			&:nth-child(odd){
+				left: 0%;
+				img{
+					position: absolute;
+					top: -30px;
+					right: -6%;
+				}
+			}
+			&:nth-child(even){
+				left: 0%;
+				img{
+					position: absolute;
+					top: -30px;
+					left: 65%;
 				}
 			}
 			img{
-				width: 70%;
-				margin-top: 5%;
+				z-index: 100;
+			}
+			.table2{
+				display: none;
 			}
 		}
-		.context{
-			.context-block{
+		.align-left{
+			left: 0%;
+		}
+		.align-right{
+			right: 0%;
+		}
+		.context-side{
+			width: 100%;
+			height: 100%;
+			h3{
+				font-size: 1.3rem;
+			}
+			p{
+				padding: 5%;
+				font-size: 1rem;
+			}
+		}
+		.block-fco{
+			padding-bottom: 5%;
+			border: 3px solid #DDD;
+			margin-bottom: 5%;
+			h3{
 				display: block;
-				position: relative;
-				/*margin: 5% auto;*/
-				text-align: center;
+				width: 100%;
+				color: $fcoColor;
+				border-color: $fcoColor;
+			}
+			p{
+				color: #222;
+				font-size: 1.3rem;
+			}
+			img{
+				max-width: 50%;
 				vertical-align: middle;
-				background: none;
+			}
+			.fco-text{
+				display: block;
+				vertical-align: middle;
+				text-align: left;
 				width: 100%;
-				/*max-width: 850px;*/
-				&:nth-child(odd){
-					left: 0%;
-					img{
-						position: absolute;
-						top: -130px;
-						right: -6%;
-					}
-				}
-				&:nth-child(even){
-					left: 0%;
-					img{
-						position: absolute;
-						top: -130px;
-						left: 65%;
-					}
-				}
-				img{
-					z-index: 100;
-				}
-				.table2{
-					display: none;
-				}
-			}
-			.align-left{
-				left: 0%;
-			}
-			.align-right{
-				right: 0%;
-			}
-			.context-side{
-				width: 100%;
-				height: 100%;
-				p{
-					padding: 5%;
-				}
-			}
-			.block-fco{
-				padding-bottom: 5%;
-				border: 3px solid #DDD;
-				margin-bottom: 5%;
-				h3{
-					display: block;
-					width: 100%;
-					color: $fcoColor;
-					border-color: $fcoColor;
-				}
-				p{
-					color: #222;
-				}
-				img{
-					max-width: 50%;
-					vertical-align: middle;
-				}
-				.fco-text{
-					display: block;
-					vertical-align: middle;
-					text-align: left;
-					width: 100%;
-					padding: 3%;
-				}
+				padding: 3%;
 			}
 		}
 	}
+}
+/***************************************************\
+					LIGHTBOX
+\***************************************************/
+.lightbox{
+	.memory-sweet, .memory-fco{
+	padding-bottom: 10%;
+	width: 90%;
+	}
+	.polaroid1, .polaroid2, .polaroid3{
+		width: 80%;
+	}
+}
 /***************************************************\
 					CONTACT
 \***************************************************/
-/*	.form-contacter{
-		user-select :none;
-		max-width: 470px;
-		margin: 1% auto;
-		padding-top: 2%;
-		position: relative;
-		overflow: hidden;
-		.form-contact{
-			display: inline-block;
-			width: 440px;
-			background-image: url('../images/contact/paper.png');
-			border: 1px solid #DDD;
-			padding: 2% 3%;
-			text-align: left;
-			.error{
-				font-family: $titleFont;
-				position: absolute;
-				left: 20%;
-				color: red;
-			}
-	}*/
 	.form-contacter{
 		transform: scale(1);
 		margin: 10% auto;
@@ -230,17 +236,36 @@
 		input, textarea, label, button{
 			font-size: 2.9rem;
 		}
+		input, textarea, label{
+			font-size: 1.3rem;
+		}
 		label{
-			width: 260px;
+			/*width: 130px;*/
+			display: block;
+		}
+		input{
+			width: 100%;
 		}
 		button{
 			padding: 15px 20px;
 		}
+		textarea{
+			width: 100%;
+			max-width: 100%;
+		}
+		.submit{
+			margin-top: 5%;
+			button{
+				font-size: 1.3rem;
+			}
+		}
 		.form-contact{
-			padding: 10% 0 5% 0;
+			padding: 10% 5%;
 			width: 100%;
 			.error{
-				top: 8%;
+				top: 4%;
+				left: 5%;
+				font-size: 0.9rem;
 			}
 		}
 		.contact{
@@ -258,17 +283,18 @@
 					/*display: block;	*/
 				}
 				.mail{
+					font-size: 1.2rem;
 					font-family: $titleFont;
 					color: #555;
 					text-align: center;
 					position: relative;
 					left: 0;
-					top: 0;
+					top: 10px;
 				}
 			}
 			&-paper{
 				top: 10px;
-				width: 97%;
+				width: 91%;
 			}
 		}
 		.stamp{
@@ -314,10 +340,11 @@
 	\***************************************************/
 	.career{
 		background: none;
+		height: $careerEventTop * 7;
 		.event{
 			width: 90%;
-			h3, p, li{
-				font-size: 2rem;
+			h5, p, li{
+				font-size: 1.1rem;
 			}
 			.body{
 				background: #FFF;
@@ -325,21 +352,18 @@
 				color: gray;
 			}
 		}
-		.first{
-			margin-top: 140px;
-		}
 		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
 			.top{
 				.title{
-					height: 80px;
-					padding: 2%;
+					height: 60px;
+					padding: 3% 4%;
 				}
 				.square{
-					padding: 2%;
-					top: 10px;
-					right: 10px;
-					width: 80px;
-					height: 80px;
+					padding: 2.5% 2%;
+					top: -10px;
+					right: -10px;
+					width: 55px;
+					height: 50px;
 					p{
 						font-size: 2rem;
 					}
@@ -351,17 +375,47 @@
 					display: none;
 				}
 				.date{
-					left: 550px;
-					top: 20px;
+					left: 12px;
+					top: 31px;
 					right: 0;
 					p{
-						font-size: 1.6rem;
+						font-size: 1.2rem;
 					}
 				}
-				
+			}
+			.body{
+				padding: 10px 20px;
+				p{
+					strong{
+						color: #676767;
+					}
+				}
 			}
 		}
-
+		.first{
+			margin-top: 50px;
+		}
+		.second{
+			margin-top: $careerEventTop * 1.85;
+		}
+		.third{
+			margin-top: $careerEventTop * 2.7;
+		}
+		.fourth{
+			margin-top: $careerEventTop * 3.9;
+		}
+		.fifth{
+			margin-top: $careerEventTop * 4.85;
+		}
+		.sixth{
+			margin-top: $careerEventTop * 5.94;
+		}
+		.seventh{
+			margin-top: $careerEventTop * 6.8;
+		}
+		.eighth{
+			margin-top: $careerEventTop * 7.65;
+		}
 		.left{
 			position: absolute;
 			transform: translate(-50%, 0);
