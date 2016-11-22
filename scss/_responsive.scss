@@ -1,30 +1,22 @@
 /******************************************************************************************************\
 					RESPONSIVE PORTRAIT
 \******************************************************************************************************/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 640px)
-  and (orientation: portrait){
+@media screen
+  and (max-device-width: 640px){
 /***************************************************\
 					SIDEBAR
 \***************************************************/
-	h2, h3{
-		font-size: 2rem;
-	}
-	h2{
-		padding-left: 20%;
-	}
-	p, a{
-		font-size: 2.5rem;
-	}
 	.sidebar{
 		padding-top: 100px;
 		transition-duration: 0.5s;
+		a{
+			font-size: 2.5rem;
+		}
 		.menu{
 		    top: 0px;
-			right: -95px;
-		    width: 100px;
-		    height: 100px;
+			right: -65px;
+		    width: 60px;
+		    height: 60px;
 		    /*background: #0A192C;*/
 		    .line{
 		    	left: 20%;
@@ -33,11 +25,9 @@
 		    #top{top: 27%;}
 			#mid{top: 50%;}
 			#bot{top: 73%;}
-/*		    border: 3px solid $sweetColor;*/
-		    /*border-radius: 3px;*/
-		    @include radius(8px);
 		    .line{
-		    	height: 5px;
+		    	height: 3px;
+		    	@include radius(10px);
 		    }
 		}
 		.ics{
@@ -49,34 +39,30 @@
 /***************************************************\
 					HOMEPAGE
 \***************************************************/
-		.home{
-			.title{
-				padding-top: 40%;
-				h1{
-					font-size: 1.6rem;
-				}
-			}
-			.links{
-				a{
-					font-size: 1.6rem;
-					margin: 5%;
-				}
+	.home{
+		.title{
+			padding-top: 40%;
+			h1{
+				font-size: 1.6rem;
 			}
 		}
+		.links{
+			a{
+				font-size: 1.6rem;
+				margin: 5%;
+			}
+		}
+	}
 /***************************************************\
 					PAGE PORTFOLIO
 \***************************************************/
-/*	.content{
-
-	}*/
 	.creations{
-		text-align: center;
 		#creation-1, #creation-2, #creation-3{
-			display: inline-block;
 			width: 100%;
 			margin: 0;
 			h4{
-				font-size: 1rem;
+				margin-top: 5px; 
+				margin-bottom: 10px;
 			}
 			img{
 				width: 30%;
@@ -86,7 +72,6 @@
 			}
 		}
 		#creation-1 img{
-			@include radius(10px);
 			width: 20%;
 		}
 		#creation-2:hover img, #creation-3:hover img{
@@ -97,57 +82,33 @@
 				PAGE FCO + SWEETHOME
 \***************************************************/
 .content-pages{
-	h2{
-		padding-left: 0;
+	.back{
+		right: 14px;
+		top: 12px;
+		display: block;
+		text-align: right;
 	}
 	.title{
-		.price{
-			h2{
-				font-size: 1.6rem;
-			}
-			.cup{
-				font-size: 2rem;
-			}
-		}
 		img{
 			width: 70%;
 			margin-top: 5%;
 		}
-	}
-	/********************************************************************************\
-					DESCRIPTION
-	\********************************************************************************/
-	.description{
-		background: #174071;
-		text-align: left;
-		padding: 5% 7%;
-		/*h3{
-			font-size: 1rem;
-		}*/
-		p{
-			font-size: 1.2rem;
+		.price{
+			h2{
+				font-size: 1.6rem;
+			}
 		}
-	}
-	.description-fco{
-		background: $fcoColor;
 	}
 	/********************************************************************************\
 					CONTEXTE
 	\********************************************************************************/
 	.context{
 		.context-block{
-			display: block;
-			position: relative;
-			/*margin: 5% auto;*/
-			text-align: center;
-			vertical-align: middle;
 			background: none;
 			width: 100%;
-			/*max-width: 850px;*/
 			&:nth-child(odd){
 				left: 0%;
 				img{
-					position: absolute;
 					top: -30px;
 					right: -6%;
 				}
@@ -155,13 +116,12 @@
 			&:nth-child(even){
 				left: 0%;
 				img{
-					position: absolute;
 					top: -30px;
 					left: 65%;
 				}
 			}
 			img{
-				z-index: 100;
+				z-index: 1;
 			}
 			.table2{
 				display: none;
@@ -173,6 +133,15 @@
 		.align-right{
 			right: 0%;
 		}
+		.block-fco{
+			padding-bottom: 5%;
+			border: 3px solid #DDD;
+			margin-bottom: 5%;
+			.fco-text{
+				display: block;
+				width: 100%;
+			}
+		}
 		.context-side{
 			width: 100%;
 			height: 100%;
@@ -181,33 +150,6 @@
 			}
 			p{
 				padding: 5%;
-				font-size: 1rem;
-			}
-		}
-		.block-fco{
-			padding-bottom: 5%;
-			border: 3px solid #DDD;
-			margin-bottom: 5%;
-			h3{
-				display: block;
-				width: 100%;
-				color: $fcoColor;
-				border-color: $fcoColor;
-			}
-			p{
-				color: #222;
-				font-size: 1.3rem;
-			}
-			img{
-				max-width: 50%;
-				vertical-align: middle;
-			}
-			.fco-text{
-				display: block;
-				vertical-align: middle;
-				text-align: left;
-				width: 100%;
-				padding: 3%;
 			}
 		}
 	}
@@ -228,11 +170,9 @@
 					CONTACT
 \***************************************************/
 	.form-contacter{
-		transform: scale(1);
 		margin: 10% auto;
 		overflow: initial;
 		max-width: 100%;
-		font-size: 2rem;
 		input, textarea, label, button{
 			font-size: 2.9rem;
 		}
@@ -240,7 +180,6 @@
 			font-size: 1.3rem;
 		}
 		label{
-			/*width: 130px;*/
 			display: block;
 		}
 		input{
@@ -270,27 +209,13 @@
 		}
 		.contact{
 			&-background{
-				/*bottom: -200px;*/
 				display: none;
 			}
 			&-top{
-				/*bottom: -205px;*/
 				display: none;
 			}
 			&-bottom{
-				img{
-					display: none;
-					/*display: block;	*/
-				}
-				.mail{
-					font-size: 1.2rem;
-					font-family: $titleFont;
-					color: #555;
-					text-align: center;
-					position: relative;
-					left: 0;
-					top: 10px;
-				}
+				display: none;
 			}
 			&-paper{
 				top: 10px;
@@ -318,8 +243,9 @@
 			top: 500px;
 		}*/
 	/***************************************************\
-				ANIMATION CONTACT AU CLIQUE
+						ANIMATIONS
 	\***************************************************/
+	/* DÉCLENCHEMENT DE L'ANIMATION AU CLICK*/
 		.play-contact-top{
 			@include transform(rotateX(180deg));
 			bottom: -140px;
@@ -346,20 +272,15 @@
 			h5, p, li{
 				font-size: 1.1rem;
 			}
-			.body{
-				background: #FFF;
-				/*padding: 20px;*/
-				color: gray;
-			}
 		}
 		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
 			.top{
 				.title{
-					height: 60px;
+					height: 65px;
 					padding: 3% 4%;
 				}
 				.square{
-					padding: 2.5% 2%;
+					padding: 1.5% 2.5%;
 					top: -10px;
 					right: -10px;
 					width: 55px;
@@ -376,15 +297,12 @@
 				}
 				.date{
 					left: 12px;
-					top: 31px;
+					top: 33px;
 					right: 0;
-					p{
-						font-size: 1.2rem;
-					}
 				}
 			}
 			.body{
-				padding: 10px 20px;
+				padding: 15px 20px;
 				p{
 					strong{
 						color: #676767;
@@ -417,11 +335,9 @@
 			margin-top: $careerEventTop * 7.65;
 		}
 		.left{
-			position: absolute;
 			transform: translate(-50%, 0);
 		}
 		.right{
-			position: absolute;
 			transform: translate(-50%, 0);
 		}
 	}
@@ -430,26 +346,20 @@
 /******************************************************************************************************\
 					RESPONSIVE LANDSCAPE
 \******************************************************************************************************/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 640px)
-  and (-webkit-min-device-pixel-ratio: 2)
+@media only screen  
+  and (max-device-height: 500px)
   and (orientation: landscape){
 /***************************************************\
 					HOMEPAGE
 \***************************************************/
 	.content{
-		#title{
-			padding-top: 5%;
-			p{
-				font-size: 60px;
-			}
-		}
-		#enter{
-			left: 40%;
-			svg{
-				width: 150px;
-				height: 150px;
+		.home{
+			/*padding-top: 0;*/
+			.title{
+				padding-top: 10%;
+				p{
+					font-size: 60px;
+				}
 			}
 		}
 	}
@@ -457,10 +367,10 @@
 					SIDEBAR
 \***************************************************/
 	.sidebar{
-		padding-top: 50px;
+		padding-top: 10px;
 		.menu{
-		    top: 1%;
-			right: -100px;
+		    top: -3%;
+			right: -80px;
 		    width: 80px;
 		    height: 80px;
 		    .line{
@@ -468,11 +378,12 @@
 		    }
 		}
 		.ics{
-			top: 10%;
+			top: 5%;
+			right: 2%;
 		}
 		.links{
-			a{
-				font-size: 60px;
+			a, p{
+				font-size: 2rem;
 			}
 		}
 	}
@@ -483,11 +394,20 @@
 		text-align: center;
 		#creation-1, #creation-2, #creation-3{
 			display: inline-block;
-			width: 60%;
+			width: 30%;
 			margin: 0;
-			img{
-				width: 30%;
+			h4{
+				font-size: 0.7rem;
 			}
+			img{
+				width: 75%;
+				&:hover{
+					width: 90%;
+				}
+			}
+		}
+		#creation-1 img{
+			width: 40%;
 		}
 	}
 /***************************************************\
@@ -517,6 +437,34 @@
 			}
 			&-paper{
 				top: 5px;
+			}
+		}
+	}
+	/***************************************************\
+						MON PARCOURS
+	\***************************************************/
+	.career{
+		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
+			.top{
+				.title{
+					padding: 2% 4%;
+				}
+				.square{
+					padding: 1% 1.5%;
+				}
+				.date{
+					left: 22px;
+					top: 33px;
+					right: 0;
+				}
+			}
+			.body{
+				padding: 15px 20px;
+				p{
+					strong{
+						color: #676767;
+					}
+				}
 			}
 		}
 	}

@@ -3,11 +3,6 @@
 		text-align: center;
 		padding-top: 15%;
 		font-family: $titleFont;
-		h1{
-			margin-bottom: 50px; 
-			font-size: 3rem;
-			color: #16A085;
-		}
 		span{
 			color: $sweetColor;
 			padding: 1%;
@@ -40,26 +35,4 @@
 			height: 4px;
 		}
 	}
-/*
-	#enter{
-		position: relative;
-		top: 0;
-		left: 43%;
-		width: 150px;
-		height: 150px;
-		#finger{
-			position: absolute;
-			top: 25%;
-			left: 40%;
-		}
-	}
-	svg{
-	    transition: all 200ms ease-in;
-	    -ms-transition: all 200ms ease-in;
-	    -moz-transition: all 200ms ease-in;
-	    animation: finger 1.5s infinite alternate;
-	}
-	svg:hover{
-		cursor: pointer;
-	}*/
 }

@@ -1,7 +1,6 @@
 .creations{
-	padding-top: 2%;
 	font-family: $titleFont;
-	color: $textColor;
+	color: $titleColor;
 	text-align: center;
 	#creation-1, #creation-2, #creation-3{
 		/*border: 1px solid orange;*/
@@ -13,57 +12,41 @@
 			width: 70%;
 			display: inline-block;
 			transition: all 400ms ease;
-/*			box-shadow: 5px 10px 25px 5px gray;
-			-webkit-box-shadow: 5px 10px 25px 5px gray;
-			-moz-box-shadow: 5px 10px 25px 5px gray;*/
 			filter: grayscale(90%);
-		}
-		h3{
-			font-weight: bold;
 		}
 	}
 	#creation-1 img{
-		@include radius(13px);
 		width: 40%;
 		max-width: 60%;
 		&:hover{
-			@include radius(20px);
 			width: 50%;
 			filter: grayscale(0%);
-			/*@include transform(rotateX(22deg));*/
-			/*transform: rotateX(25deg);*/
-			/*box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
-			-webkit-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
-			-moz-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);*/
 		}
 	}
 	 #creation-2:hover img, #creation-3:hover img{
 		width: 80%;
 		filter: grayscale(0%);
-		/*@include transform(rotateX(22deg));*/
-		/*transform: rotateX(22deg);*/
-		/*box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
-		-webkit-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);
-		-moz-box-shadow: 5px 10px 25px 5px rgba(0,0,0,0.1);*/
 	}
 }
 .content-pages{
 	text-align: center;
 	user-select :none;
-	.bold{
-		font-weight: bold;
+	.orange{
 		color: orange;
 	}
-	h2, h3, p{
-		margin: 0;
-		padding-top: 2%;
-		font-family: $titleFont;
-		font-weight: initial;
-		color: #FFF;
+	h2, h3{
+		color: $textColor;
 	}
-	p{
-		font-family: $paraFont;
-		text-align: justify;
+	/* BTN RETOUR */
+	.back{
+			z-index: 1;
+			position: absolute;
+			top: 75px;
+			left: 25px;
+		a{
+			text-decoration: none;
+			color: $textColor;
+		}
 	}
 	/********************************************************************************\
 					DÉCLARATIONS COMMUNES SWEET + FCO TITLE
@@ -83,8 +66,8 @@
 		}
 		.price{
 			.cup{
-				font-size: 3rem;
-				color: orange !important;
+				font-size: 2rem;
+				color: orange;
 			}
 			h2{
 				font-family: $paraFont;
@@ -103,7 +86,7 @@
 					DESCRIPTION
 	\********************************************************************************/
 	.description{
-		background: #174071;
+		background: $sweetLight;
 		text-align: left;
 		padding: 5% 7%;
 		h3{
@@ -125,9 +108,6 @@
 			border-bottom: 4px solid orange;
 			width: 20%;
 		}
-		p{
-			text-align: justify;
-		}
 		img{
 			display: inline-block;
 			padding-top: 6%;
@@ -142,6 +122,7 @@
 			right: 5%;
 			
 		}
+		/* CONTIENT TEXTE + IMAGE */
 		.context-block{
 			display: block;
 			position: relative;
@@ -165,9 +146,11 @@
 					left: 5%;
 				}
 			}
+			/* PHOTO TABLEAU 1 */
 			img{
 				max-width: 40%;
 			}
+			/* PHOTO TABLEAU 2 */
 			.table2{
 				margin: 8% 15% 0 0;
 			}
@@ -180,7 +163,6 @@
 			}
 		}
 		.block-fco{
-			padding-bottom: 5%;
 			h3{
 				display: block;
 				width: 100%;
@@ -202,6 +184,7 @@
 				padding: 3%;
 			}
 		}
+		/* LOGO AVANT-APRES */
 		.before-after{
 			/*border: 1px solid blue;*/
 			display: inline-block;
@@ -228,6 +211,7 @@
 		.align-right{
 			right: -42%;
 		}
+		/* BLOC DE TEXTE DANS CONTEXT-BLOCK */
 		.context-side{
 			/*border: 1px solid yellow;*/
 			display: inline-block;
@@ -240,25 +224,4 @@
 			background: $sweetColor;
 		}
 	}
-/********************************************************************************\
-				DEMO
-\********************************************************************************/
-/*	.demo{
-			position: absolute;
-			left: 50%;
-			width: 0;
-		.tab{
-			transform: translate(-375px, 0);
-			.screen{
-				position: absolute;
-				top: 30px;
-				left: 100px;
-				width: 550px;
-				height: 430px;
-				max-width: 550px;
-				max-height: 430px;
-				overflow: hidden;
-			}
-		}
-	}*/
 }

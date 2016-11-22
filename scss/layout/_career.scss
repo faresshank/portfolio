@@ -1,11 +1,11 @@
 h2{
 	text-align: center;
-	color: $textColor;
+	color: $titleColor;
 }
 .career{
 	position: relative;
 	width: 100%;
-	background: url('../images/career/point.png') center;
+	background: url('../images/career/dot.png') center;
 	background-repeat: repeat-y;
 	height: $careerEventTop * 9;
 	.event{
@@ -15,12 +15,13 @@ h2{
 		text-align: left;
 		color: #FFF;
 		margin: 5% 0;
-		/*@include boxShadow(0px, 0px, 15px, 5px, blue);*/
 		box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
 		-webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
 		-moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
 		p{
+			font-family: $titleFont;
 			font-size: 1rem;
+			color: gray;
 		}
 		h3, p{
 			margin: 0;
@@ -226,9 +227,9 @@ h2{
 			}
 		}
 	}
-/********************************************************\
-            ALIGNEMENT
-\********************************************************/
+	/********************************************************\
+	            ALIGNEMENT
+	\********************************************************/
 	.left{
 		position: absolute;
 		transform: translate(-449px, 0);

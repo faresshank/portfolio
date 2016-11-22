@@ -1,46 +1,40 @@
 (function() {
 	"use strict";
-/*
-	var toggles = document.querySelectorAll(".c-hamburger");
-	for(var i = toggles.length - 1; i >= 0; i--) {
-		var toggle = toggles[i];
-	    toggleHandler(toggle);
-	};
-*/
-	var select = document.getElementById("enter");
-	if(select){
-		select.onclick = function(e){
-			window.location = "./index.php?page=portfolio";
+	///////////////////////////////////////////////
+	// VÉRIFICATION DE LA VALIDITÉ DE L'INPUT EMAIL
+	///////////////////////////////////////////////
+	function validEmail(inputEmail) {  
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if(inputEmail.value.match(mailformat)){
+			document.form.mail.focus();
+			return true; 
+		}  
+		else{
+			alert("You have entered an invalid email address!");  
+			/*document.form.mail.focus();*/
+			return false;  
 		}
 	}
-
-	var hover1 = document.getElementById("hover_web");
-	if(hover1){
-		hover1.onclick = function(e){
-			console.log('yes');
-			window.location = "./index.php?page=portfolio";
-		}
-	}
-
-	var hover2 = document.getElementById("hover_design");
-	if(hover2){
-		hover2.onclick = function(e){
-			console.log('yes');
-			window.location = "./index.php?page=crea_design";
-		}
-	}
-
+	///////////////////////////////////////////////
+	// GESTION DE L'ANIMATION APRES "validEmail"
+	///////////////////////////////////////////////
 	var contact = document.getElementById("contact-send");
 	if(contact){
 		contact.onclick = function(e){
-			document.getElementById("contact-send").classList.add("display");
-			document.getElementById("contact-paper").style.top ="450px";
-			document.getElementById("contact-paper").style.height ="100px";
-			document.getElementById("contact-top").classList.add("play-contact-top");
-			document.getElementById("stamp").classList.add("play-stamp")
+			var mail = document.getElementById("mail");
+			if(!empty(mail)){
+				validEmail(mail);
+				document.getElementById("contact-send").classList.add("display");
+				document.getElementById("contact-paper").style.top ="450px";
+				document.getElementById("contact-paper").style.height ="100px";
+				document.getElementById("contact-top").classList.add("play-contact-top");
+				document.getElementById("stamp").classList.add("play-stamp")
+			}
 		}
 	}
-
+	///////////////////////////////////////////////
+	// AFFICHAGE DE LA SIDEBAR
+	///////////////////////////////////////////////
 	var ics = document.getElementById('ics');
 	var menu = document.getElementById('menu');
     var icsL = document.getElementById('ics-l');
@@ -68,7 +62,9 @@
 			document.getElementById("links").classList.add("show-links");
 	    }
 	}
-
+	///////////////////////////////////////////////
+	// LIGHTBOX
+	///////////////////////////////////////////////
 	var fade = document.getElementById('fade');
 	if(fade){
 		fade.onclick = function(e){

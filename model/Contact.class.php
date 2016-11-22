@@ -14,9 +14,7 @@
 		private $bodyMail;
 		private $error;
 
-// Méthodes
 // GETTERS
-
 		public function getId()
 		{
 			return $this->id;
@@ -53,7 +51,6 @@
 		}
 
 // SETTERS
-
 		public function setName($name)
 		{
 			if(empty($name)){
@@ -106,7 +103,6 @@
 		}
 
 // Liste des fonctions spécifiques
-
 		public function headMail(){
 			if ($this->name != null && $this->mail != null ){
 				$this->headMail  = 'MIME-Version: 1.0'."\r\n";
@@ -118,7 +114,6 @@
 				throw new Exception("Error Processing Request");
 			}
 		}
-
 		public function bodyMail(){
 			$this->bodyMail  = "<p>Message de : ".$this->getName()."\n</p>";
 			$this->bodyMail .= "<p>Adresse mail : ".$this->getMail()."\n</p>";
@@ -133,7 +128,6 @@
 									</body>
 								</html>';
 		}
-
 		public function sendmail($to){
 			if(!mail( $to, $this->object, $this->bodyMail, $this->headMail )){
 				$error = "morche po !".$to."\n". $this->object."\n". $this->bodyMail."\n". $this->headMail;
@@ -143,23 +137,5 @@
 			}
 				$this->error = $error;
 		}
-		/*
-		public function setPassword($password)
-		{
-			//conditions de verification de password
-			var_dump(empty($password));
-			die;
-			if(empty($password)){
-				echo "merci de 222222";
-				throw new Exception("Merci de remplir tout les champs");
-			}
-			else if(strlen($password) < 3){
-				throw new Exception("Le mot de passe est trop court");
-			}
-			else{
-				$this->password = password_hash($password, PASSWORD_DEFAULT);
-			}
-		}
-		*/
 	}
 ?>

@@ -31,25 +31,28 @@ h1{
 	text-align: center;
 	font-weight: bold;
 	font-size: 2rem;
-	margin-bottom: 20px;
-	color: #333;
+	margin-bottom: 50px;
+	color: #16A085;
 }
 h2{
-	font-size: 3rem;
+	font-size: 1.6rem;
 }
 h3{
-	font-size: 2.5rem;
+	font-size: 1.9rem;
 }
 h4{
-	font-size: 2rem;
+	font-size: 1rem;
 }
 h5{
-	font-size: 2rem;
+	font-size: 1rem;
 	margin: 0;
 }
 p{
 	margin: 8px 0;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
+	font-family: $paraFont;
+	text-align: left;
+	color: #FFF;
 }
 
 pre{
@@ -67,71 +70,10 @@ blockquote{
 		}
 	}
 }
-
 .clearfix:after{
 	content:"";
 	display: block;
 	clear: both;
-}
-/*
-.full-width{
-	max-width: 100% !important;
-}
-
-.mb20{
-	margin-bottom: 20px !important;
-}
-
-.tac{
-	text-align: center !important;
-}
-
-.tar{
-	text-align: right !important;
-}
-
-.no-marge{
-	margin: 0 !important;
-}
-
-.no-padding{
-	padding: 0 !important;
-}
-
-.pull--left{
-	float: left !important;
-}
-
-.pull--right{
-	float: right !important;
-}
-
-.columns:last-child:not(.pull--right), .column:last-child:not(.pull--right){
-	float:left !important;
-}
-.content{
-	z-index: 1;
-	position: fixed;
-	overflow: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: #ECF0F1;
-	font-family: $titleFont;
-	font-size: 1rem;
-	text-align: center;
-}*/
-@font-face {
-    font-family: fashion;
-    src: url('../fonts/fashion.ttf');
-}
-@font-face {
-    font-family: kaushan;
-    src: url('../fonts/kaushanscript.eot') format('eot'),
-         url('../fonts/kaushanscript.woff') format('woff'),
-         url('../fonts/kaushanscript.ttf') format('truetype'),
-         url('../fonts/kaushanscript.svg') format('svg');
 }
 @font-face {
     font-family: orbitron;
