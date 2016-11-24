@@ -20,10 +20,6 @@
 			}
 			path[name="polyCenter"]{
 				fill-opacity: 0;
-
-			}
-			path[name="polyBorder"]{
-
 			}
 			path[name="letter"]{
 				fill-opacity: 0;
@@ -40,18 +36,19 @@
 	}
 	.link{
 		text-align: center;
-		font-family: $titleFont;
 		a{
+			padding: 0.8% 1.5%;
 			display:inline-block;
-			font-size: 1.2rem;
 			text-decoration: none;
+			font-family: $paraFont;
+			font-size: 1.2rem;
 			color: $sweetColor;
-			padding: 0.5%;
-			transition: all 0.3s;
 			border: 2px solid #16A085;
+			@include radius(50px);
+			transition: all 0.3s;
 		}
 		a:hover{
-			color: #DDD;
+			color: #EEE;
 			background: #16A085;
 		}
 	}
