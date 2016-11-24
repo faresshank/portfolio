@@ -11,6 +11,8 @@ catch (PDOException $e)
 	exit;
 }*/
 /*var_dump(mysqli_error($db));*/
+define("URL_WEBSITE", "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]);
+
 function __autoload($className){
 	require('model/'.$className.'.class.php');
 }

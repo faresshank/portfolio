@@ -21,7 +21,7 @@
 				$post->sendmail($to);
 				/*var_dump($post);*/
 
-				header("Location: index.php?page=home");
+				header("Location: home");
 				exit;
 			}
 			catch (Exception $exception)

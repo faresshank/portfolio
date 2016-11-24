@@ -1,38 +1,58 @@
 .home{
+	height: 100%;
+	.vector{
+		padding-top: 10%;
+		svg{
+			width: 200px;
+			height: 300px;
+			display: block;
+			margin: 0 auto;
+			path{
+				stroke: #fff;
+				stroke-dasharray: 3319;
+				stroke-dashoffset: 3319;
+			    animation-name: drawVector;
+			    animation-duration: 3s;
+			    animation-iteration-count: 1;
+			    animation-fill-mode: forwards;
+			    animation-timing-function: linear;
+				stroke-width: 8;
+			}
+			path[name="polyCenter"]{
+				fill-opacity: 0;
+
+			}
+			path[name="polyBorder"]{
+
+			}
+			path[name="letter"]{
+				fill-opacity: 0;
+			}
+		}
+	}
 	.title{
 		text-align: center;
-		padding-top: 15%;
 		font-family: $titleFont;
 		span{
 			color: $sweetColor;
 			padding: 1%;
 		}
 	}
-	.links{
+	.link{
 		text-align: center;
 		font-family: $titleFont;
 		a{
 			display:inline-block;
-			font-size: 2rem;
+			font-size: 1.2rem;
 			text-decoration: none;
 			color: $sweetColor;
-			margin: 0 5%; 
+			padding: 0.5%;
 			transition: all 0.3s;
+			border: 2px solid #16A085;
 		}
 		a:hover{
-			color: #144686;
-		}
-		.link-portfolio:hover .links-line{
-			width: 100%;
-		}
-		.link-contact:hover .links-line{
-			width: 100%;
-		}
-		.links-line{
-			transition: all 0.3s ease;
+			color: #DDD;
 			background: #16A085;
-			width: 0%;
-			height: 4px;
 		}
 	}
 }
