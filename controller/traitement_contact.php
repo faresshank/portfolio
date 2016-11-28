@@ -14,15 +14,10 @@
 				/*var_dump($_POST);*/
 				$post = $manager->post($name, $firstname, $mail, $object, $message);
 
-				$to = "fafetnach@gmail.com";
-
-				$post->headMail();
-				$post->bodyMail();
-				$post->sendmail($to);
 				/*var_dump($post);*/
 
-				header("Location: home");
-				exit;
+/*				header("Location: home");
+				exit;*/
 			}
 			catch (Exception $exception)
 			{

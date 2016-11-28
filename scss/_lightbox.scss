@@ -5,6 +5,7 @@
 	img{
 		max-height: 85%;
 		animation: show 0.8s;
+		cursor: pointer;
 	}
 	.memory-sweet{
 		padding-bottom: 5%;
@@ -33,6 +34,8 @@
 		top: 10%;
 		left: 10%;
 		width: 80%;
+		color: orange;
+		padding: 3%;
 	}
 	.black-overlay{
 		z-index:1004;

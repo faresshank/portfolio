@@ -4,10 +4,11 @@
 		padding-top: 10%;
 		svg{
 			width: 200px;
-			height: 300px;
+			height: 200px;
 			display: block;
-			margin: 0 auto;
+			margin: 50px auto;
 			path{
+			cursor: pointer;
 				stroke: #fff;
 				stroke-dasharray: 3319;
 				stroke-dashoffset: 3319;
@@ -18,10 +19,7 @@
 			    animation-timing-function: linear;
 				stroke-width: 8;
 			}
-			path[name="polyCenter"]{
-				fill-opacity: 0;
-			}
-			path[name="letter"]{
+			#polyCenter, #letter{
 				fill-opacity: 0;
 			}
 		}

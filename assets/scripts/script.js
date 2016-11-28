@@ -1,6 +1,15 @@
 (function() {
 	"use strict";
 	///////////////////////////////////////////////
+	// ONCLICK SUR SVG DE LA HOME
+	///////////////////////////////////////////////
+	var homeBtn = document.getElementById('homeBtn');
+	if(homeBtn){
+		homeBtn.onclick = function(e){
+			window.location = 'portfolio';
+		}
+	}
+	///////////////////////////////////////////////
 	// VÉRIFICATION DE LA VALIDITÉ DE L'INPUT EMAIL
 	///////////////////////////////////////////////
 	function validEmail(inputEmail) {  
@@ -11,7 +20,6 @@
 		}  
 		else{
 			alert("You have entered an invalid email address!");  
-			/*document.form.mail.focus();*/
 			return false;  
 		}
 	}
@@ -65,53 +73,42 @@
 	///////////////////////////////////////////////
 	// LIGHTBOX
 	///////////////////////////////////////////////
-	var fade = document.getElementById('fade');
-	if(fade){
-		fade.onclick = function(e){
-			fade.classList.remove('isShowing');
-			fade.classList.add('isFade');
-			if(zoom1.classList.contains('isShowing')){
-				zoom1.classList.remove('isShowing');
-				zoom1.classList.add('isFade');
+	var tab = {	
+		polaroid1 :{
+			"element" : document.getElementById('polaroid1'),
+			"id" : "zoom1" 
+		}, 
+		polaroid2 :{
+			"element" : document.getElementById('polaroid2'),
+			"id" : "zoom2"
+		},
+		polaroid3 :{
+			"element" : document.getElementById('polaroid3'),
+			"id" : "zoom3" 
+		}
+	};
+	function handleElement(polaroid){
+		var zoomId = document.getElementById(polaroid.id);
+		if(zoomId){
+			var zoomClass = zoomId.classList;
+			var fade = document.getElementById('fade').classList;
+			// Event sur click des miniatures
+			polaroid.element.onclick = function(e){
+					zoomClass.remove('isFade');
+					zoomClass.add('isShowing');
+					fade.remove('isFade');
+					fade.add('isShowing');
 			}
-			else if(zoom2.classList.contains('isShowing')){
-				zoom2.classList.remove('isShowing');
-				zoom2.classList.add('isFade');
-			}
-			else if(zoom3.classList.contains('isShowing')){
-				zoom3.classList.remove('isShowing');
-				zoom3.classList.add('isFade');
+			// Event sur click des img plein écran
+			zoomId.onclick = function(e){
+				fade.remove('isShowing');
+				fade.add('isFade');
+				zoomClass.remove('isShowing');
+				zoomClass.add('isFade');
 			}
 		}
 	}
-	var polaroid1 = document.getElementById('polaroid1');
-	if(polaroid1){
-		polaroid1.onclick = function(e){
-			var zoom1 = document.getElementById('zoom1');
-			if(zoom1.classList.contains('isFade')){
-				zoom1.classList.remove('isFade');
-				zoom1.classList.add('isShowing');
-				fade.classList.add('isShowing');
-			}
-		}
-		polaroid2.onclick = function(e){
-			var zoom2 = document.getElementById('zoom2');
-			if(zoom2.classList.contains('isFade')){
-				zoom2.classList.remove('isFade');
-				zoom2.classList.add('isShowing');
-				fade.classList.add('isShowing');
-			}
-		}
-		polaroid3.onclick = function(e){
-			var zoom3 = document.getElementById('zoom3');
-			if(zoom3.classList.contains('isFade')){
-				zoom3.classList.remove('isFade');
-				zoom3.classList.add('isShowing');
-				fade.classList.add('isShowing');
-			}
-		}
+	for ( var polaroid in tab){
+		handleElement(tab[polaroid]);
 	}
-	/*
-		regrouper les 'classList' dans une fonctions et mettre le n° de 'zoom' en paramètre
-	*/
 })();

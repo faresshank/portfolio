@@ -2,7 +2,8 @@
 					RESPONSIVE PORTRAIT
 \******************************************************************************************************/
 @media screen
-  and (max-device-width: 640px){
+	and(max-device-width: 640px)
+	and(max-width: 640px){
 /***************************************************\
 					SIDEBAR
 \***************************************************/
@@ -59,6 +60,10 @@
 					PAGE PORTFOLIO
 \***************************************************/
 	.creations{
+		.txtIntro p{
+			font-size: 1rem;
+			width: 80%;
+		}
 		#creation-1, #creation-2, #creation-3{
 			width: 100%;
 			margin: 0;
