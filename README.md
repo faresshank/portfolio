@@ -1,5 +1,5 @@
 # Présentation de mon Portfolio
-* Réalisé dans l'optique de la validation de la formation "Développeur Intégrateur Web" à la 3W Academy à Strasbourg.*
+*Réalisé dans l'optique de la validation de la formation "Développeur Intégrateur Web" à la 3W Academy à Strasbourg.*
 
 ###[www.faress.webatt.fr](http://faress.webatt.fr)
 
