@@ -29,6 +29,6 @@ Malgré toute l'energie investie dans le fonctionnement d'une routine **Gulp ([G
 
 Toutes les animations ont été réalisées en **CSS** et **JAVASCRIPT**. Expérimentant la construction d'un site de A à Z je n'ai utilisé aucune librairies. Le peu de fonctionnalités mis en place ainsi que ma volonté de les coder moi même ne justifiait pas l'utilisation de **JQUERY** par exemple.
 
-Grâce à **Sass** le **CSS** n'a jamais été aussi cool, variables `$maCouleur = #FFF` et `@mixin maBordure($maCouleur){ border-color: $maCouleur; color: $maCouleur;}` m'ont grandement facilités la tâche.
+Grâce à **Sass** le **CSS** n'a jamais été aussi cool, **variables** `$maCouleur = #FFF` et **mixins** `@mixin maBordure($maCouleur){ border-color: $maCouleur; color: $maCouleur;}` m'ont grandement facilités la tâche.
 
 Un peu de **SEO** (quelques **<meta>** et un **sitemap.xml**), un peu de **htAccess** (quelle galère avec **WAMP**) et de la motivation ont suffit pour donner... accès à mon portfolio.
