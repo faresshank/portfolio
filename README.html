@@ -28,7 +28,7 @@
 <p>Un peu de <strong>SEO</strong> (quelques <strong><meta></strong> et un <strong>sitemap.xml</strong>), un peu de <strong>htAccess</strong> (quelle galère avec <strong>WAMP</strong>) et de la motivation ont suffit pour donner... accès à mon portfolio.</p>
 <h2 id="installation-en-2-tapes">Installation en 2 étapes</h2>
 <h3 id="-tape-1">Étape 1</h3>
-<p>Créer un nouveau dossier nommé <strong>CONFIG</strong> et y crée un fichier <code>config_db.php</code>, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
+<p>Créer un nouveau dossier nommé <strong>CONFIG</strong> et y créer un fichier <code>config_db.php</code>, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
 <code>&lt;?php
     $config_online = [
         &#39;host&#39; =&gt; &#39;localhost&#39;,
@@ -40,7 +40,7 @@
 ?&gt;</code></p>
 <p><strong>Dé-commenter la 2 à 12 de <code>index.php</code>.</strong></p>
 <h3 id="-tape-2">Étape 2</h3>
-<p>Il ne reste plus qu&#39;à crée une table nommée <code>faress_contact</code> dans votre base de donnée :</p>
+<p>Il ne reste plus qu&#39;à crée une table nommée <code>faress_contact</code> dans votre base de donnée, ci-dessous le code <strong>SQL</strong>:</p>
 <p><code>CREATE TABLE IF NOT EXISTS &#39;faress_contact&#39; (
 &#39;id&#39; int(11) NOT NULL,
 &#39;name&#39; varchar(63) NOT NULL,

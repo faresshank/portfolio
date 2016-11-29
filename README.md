@@ -39,7 +39,7 @@ Un peu de **SEO** (quelques **<meta>** et un **sitemap.xml**), un peu de **htAcc
 
 ### Étape 1
 
-Créer un nouveau dossier nommé **CONFIG** et y crée un fichier `config_db.php`, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
+Créer un nouveau dossier nommé **CONFIG** et y créer un fichier `config_db.php`, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
 `<?php
 	$config_online = [
 		'host' => 'localhost',
@@ -54,7 +54,7 @@ Créer un nouveau dossier nommé **CONFIG** et y crée un fichier `config_db.php
 
 ### Étape 2
 
-Il ne reste plus qu'à crée une table nommée `faress_contact` dans votre base de donnée :
+Il ne reste plus qu'à crée une table nommée `faress_contact` dans votre base de donnée, ci-dessous le code **SQL**:
 
 `CREATE TABLE IF NOT EXISTS 'faress_contact' (
 'id' int(11) NOT NULL,
