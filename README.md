@@ -37,7 +37,7 @@ Un peu de **SEO** (quelques **<meta>** et un **sitemap.xml**), un peu de **htAcc
 
 ## Installation en 2 étapes
 
-# Étape 1
+### Étape 1
 
 Créer un nouveau dossier nommé **CONFIG** et y crée un fichier `config_db.php`, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
 `<?php
@@ -52,12 +52,12 @@ Créer un nouveau dossier nommé **CONFIG** et y crée un fichier `config_db.php
 
 Dé-commenter la 2 à 12 de `index.php`.
 
-# Étape 2
+### Étape 2
 
 Il ne reste plus qu'à crée une table nommée `faress_contact` dans votre base de donnée :
 
 CREATE TABLE IF NOT EXISTS `faress_contact` (
-  `id` int(11) NOT NULL,
+  'id' int(11) NOT NULL,
   `name` varchar(63) NOT NULL,
   `firstname` varchar(63) NOT NULL,
   `mail` varchar(255) NOT NULL,

@@ -27,7 +27,7 @@
 <p>Grâce à <strong>Sass</strong> le <strong>CSS</strong> n&#39;a jamais été aussi cool, <strong>variables</strong> <code>$maCouleur = #FFF</code> et <strong>mixins</strong> <code>@mixin maBordure($maCouleur){ border-color: $maCouleur; color: $maCouleur;}</code> m&#39;ont grandement facilités la tâche.</p>
 <p>Un peu de <strong>SEO</strong> (quelques <strong><meta></strong> et un <strong>sitemap.xml</strong>), un peu de <strong>htAccess</strong> (quelle galère avec <strong>WAMP</strong>) et de la motivation ont suffit pour donner... accès à mon portfolio.</p>
 <h2 id="installation-en-2-tapes">Installation en 2 étapes</h2>
-<h1 id="-tape-1">Étape 1</h1>
+<h3 id="-tape-1">Étape 1</h3>
 <p>Créer un nouveau dossier nommé <strong>CONFIG</strong> et y crée un fichier <code>config_db.php</code>, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
 <code>&lt;?php
     $config_online = [
@@ -39,10 +39,10 @@
     ];
 ?&gt;</code></p>
 <p>Dé-commenter la 2 à 12 de <code>index.php</code>.</p>
-<h1 id="-tape-2">Étape 2</h1>
+<h3 id="-tape-2">Étape 2</h3>
 <p>Il ne reste plus qu&#39;à crée une table nommée <code>faress_contact</code> dans votre base de donnée :</p>
 <p>CREATE TABLE IF NOT EXISTS <code>faress_contact</code> (
-  <code>id</code> int(11) NOT NULL,
+  &#39;id&#39; int(11) NOT NULL,
   <code>name</code> varchar(63) NOT NULL,
   <code>firstname</code> varchar(63) NOT NULL,
   <code>mail</code> varchar(255) NOT NULL,
