@@ -1,5 +1,5 @@
 # Présentation de mon Portfolio
-*Réalisé dans l'optique de la validation de la formation "Développeur Intégrateur Web" à la 3W Academy à Strasbourg.*
+*Réalisé dans l'optique de validation de la formation "Développeur Intégrateur Web" à la 3W Academy à Strasbourg.*
 
 ###[www.faress.webatt.fr](http://faress.webatt.fr)
 
@@ -15,15 +15,17 @@
 
 Pour ce projet, j'ai utilisé **Bower ([Github bower](https://github.com/bower/bower/))** en pensant avoir besoin de plusieurs dépendances, mais j'ai finalement décidé de ne pas me disperser et de me limiter au strict nécessaire.
 
-Malgré toute l'energie investie dans le fonctionnement d'une routine **Gulp ([Github gulp](https://github.com/bower/bower/))** pour compiler mes fichiers **SCSS** je me suis rabattu sur **Prepros ([Github prepros](https://github.com/Subash/Prepros/))** pensant qu'il effectuais les pré-fixages Vendeurs... Oui mais non! J'ai en définitive opté pour Prepros et une seule dépendance : **Font-awesome ([Github font-awesome](https://github.com/FortAwesome/Font-Awesome/))**.
+Malgré toute l'énergie investie dans le fonctionnement d'une routine **Gulp ([Github gulp](https://github.com/bower/bower/))** pour compiler mes fichiers **SCSS** je me suis rabattu sur **Prepros ([Github prepros](https://github.com/Subash/Prepros/))** pensant qu'il effectuais les pré-fixages Vendeurs... Oui mais non! J'ai en définitive opté pour Prepros et une seule dépendance : **Font-awesome ([Github font-awesome](https://github.com/FortAwesome/Font-Awesome/))**.
 
 ## Outils utilisés
 
 * Sublime text
+* Sass
 * Prepros
+* Github
 * Photoshop
 * Illustrator
-* [Google.fr](https://google.fr/)
+* [Google.com](https://google.com/)
 
 ## Du Blabla
 
