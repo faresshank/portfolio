@@ -1,5 +1,5 @@
 (function() {
-	"use strict";
+	/*"use strict";*/
 	///////////////////////////////////////////////
 	// ONCLICK SUR SVG DE LA HOME
 	///////////////////////////////////////////////
@@ -73,6 +73,7 @@
 	///////////////////////////////////////////////
 	// LIGHTBOX
 	///////////////////////////////////////////////
+/*
 	var tab = {	
 		polaroid1 :{
 			"element" : document.getElementById('polaroid1'),
@@ -111,4 +112,33 @@
 	for ( var polaroid in tab){
 		handleElement(tab[polaroid]);
 	}
+*/
+
+function $(selector){
+    this.element = document.getElementById(selector);
+}
+
+$.prototype.animate_zoom = function(classMove,zoom_item){
+    var fade_el = document.getElementById('fade').classList,
+        zoom_el = document.getElementById(zoom_item).classList;
+    this.element.onclick = function(){
+        zoom_el.remove(classMove.remove);
+        zoom_el.add(classMove.add);
+        fade_el.remove(classMove.remove);
+        fade_el.add(classMove.add);
+    }
+}
+var showing = {"remove":"isFade","add":"isShowing"},
+    fading = {"remove":"isShowing","add":"isFade"};
+
+for ( i=1;i<4;i++ ){
+    var polaroid_el = new $('polaroid'+i),
+        zoom_el = new $('zoom'+i);
+
+    if ( polaroid_el && zoom_el ){
+        polaroid_el.animate_zoom(showing,'zoom'+i);
+        zoom_el.animate_zoom(fading,'zoom'+i);
+    }
+}
+
 })();
