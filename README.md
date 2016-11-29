@@ -25,7 +25,7 @@ Malgré toute l'energie investie dans le fonctionnement d'une routine **Gulp ([G
 * Illustrator
 * [Google.fr](https://google.fr/)
 
-## Blabla
+## Du Blabla
 
 Toutes les animations ont été réalisées en **CSS** et **JAVASCRIPT**. Expérimentant la construction d'un site de A à Z je n'ai utilisé aucune librairies. Le peu de fonctionnalités mis en place ainsi que ma volonté de les coder moi même ne justifiait pas l'utilisation de **JQUERY** par exemple.
 
