@@ -1,5 +1,5 @@
 # Présentation de mon Portfolio
-* Réalisé dans l'optique de la validation de la formation "Développeur Intégrateur Web" à la 3W Academy à Strasbourg.
+* Réalisé dans l'optique de la validation de la formation "Développeur Intégrateur Web" à la 3W Academy à Strasbourg.*
 
 ###[www.faress.webatt.fr](http://faress.webatt.fr)
 
@@ -24,3 +24,11 @@ Malgré toute l'energie investie dans le fonctionnement d'une routine **Gulp ([G
 * Photoshop
 * Illustrator
 * [Google.fr](https://google.fr/)
+
+## Blabla
+
+Toutes les animations ont été réalisées en **CSS** et **JAVASCRIPT**. Expérimentant la construction d'un site de A à Z je n'ai utilisé aucune librairies. Le peu de fonctionnalités mis en place ainsi que ma volonté de les coder moi même ne justifiait pas l'utilisation de **JQUERY** par exemple.
+
+Grâce à **Sass** le **CSS** n'a jamais été aussi cool, variables `$maCouleur = #FFF` et `@mixin maBordure($maCouleur){ border: $maCouleur; }` m'ont grandement facilités la tâche.
+
+Un peu de **SEO** (quelques **<meta>** et un **sitemap.xml**), un peu de **htAccess** (quelle galère avec **WAMP**) et de la motivation ont suffit pour donner... accès à mon portfolio.
