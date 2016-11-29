@@ -38,15 +38,15 @@
         &#39;bdd&#39; =&gt; &#39;nomDeLaBase&#39;,
     ];
 ?&gt;</code></p>
-<p>Dé-commenter la 2 à 12 de <code>index.php</code>.</p>
+<p><strong>Dé-commenter la 2 à 12 de <code>index.php</code>.</strong></p>
 <h3 id="-tape-2">Étape 2</h3>
 <p>Il ne reste plus qu&#39;à crée une table nommée <code>faress_contact</code> dans votre base de donnée :</p>
-<p>CREATE TABLE IF NOT EXISTS <code>faress_contact</code> (
+<p>CREATE TABLE IF NOT EXISTS &#39;faress_contact&#39; (
   &#39;id&#39; int(11) NOT NULL,
-  <code>name</code> varchar(63) NOT NULL,
-  <code>firstname</code> varchar(63) NOT NULL,
-  <code>mail</code> varchar(255) NOT NULL,
-  <code>object</code> varchar(63) NOT NULL,
-  <code>message</code> varchar(511) NOT NULL,
-  <code>date</code> timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  &#39;name&#39; varchar(63) NOT NULL,
+  &#39;firstname&#39; varchar(63) NOT NULL,
+  &#39;mail&#39; varchar(255) NOT NULL,
+  &#39;object&#39; varchar(63) NOT NULL,
+  &#39;message&#39; varchar(511) NOT NULL,
+  &#39;date&#39; timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;</p>
