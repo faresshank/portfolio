@@ -1,11 +1,103 @@
 /******************************************************************************************************\
-					RESPONSIVE PORTRAIT
+********************************************************************************************************
+					RESPONSIVE 900px MAX
+********************************************************************************************************
+\******************************************************************************************************/
+@media screen and(max-width: 900px){
+	/***************************************************\
+						MON PARCOURS
+	\***************************************************/
+	.career{
+		background: none;
+		height: $careerEventTop * 7;
+		.event{
+			width: 90%;
+			h5, p, li{
+				font-size: 1.1rem;
+			}
+		}
+		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
+			.top{
+				.title{
+					height: 65px;
+					padding: 1.5%;
+				}
+				.square{
+					padding: 0.6% 1.4%;
+					top: -10px;
+					right: -10px;
+					width: 55px;
+					height: 50px;
+					p{
+						font-size: 2rem;
+						i{
+							font-size: 2rem;
+						}
+					}
+				}
+				.line{
+					display: none;
+				}
+				.circle{
+					display: none;
+				}
+				.date{
+					left: 12px;
+					top: 33px;
+					right: 0;
+				}
+			}
+			.body{
+				padding: 15px 20px;
+				p{
+					strong{
+						color: #676767;
+					}
+				}
+			}
+		}
+		.first{
+			margin-top: 50px;
+		}
+		.second{
+			margin-top: $careerEventTop * 1.85;
+		}
+		.third{
+			margin-top: $careerEventTop * 2.7;
+		}
+		.fourth{
+			margin-top: $careerEventTop * 3.9;
+		}
+		.fifth{
+			margin-top: $careerEventTop * 4.85;
+		}
+		.sixth{
+			margin-top: $careerEventTop * 5.94;
+		}
+		.seventh{
+			margin-top: $careerEventTop * 6.8;
+		}
+		.eighth{
+			margin-top: $careerEventTop * 7.65;
+		}
+		.left{
+			transform: translate(-50%, 0);
+		}
+		.right{
+			transform: translate(-50%, 0);
+		}
+	}
+}
+/******************************************************************************************************\
+********************************************************************************************************
+					RESPONSIVE PORTRAIT 640px MAX
+********************************************************************************************************
 \******************************************************************************************************/
 @media screen
 	and(max-device-width: 640px){
-/***************************************************\
-					SIDEBAR
-\***************************************************/
+	/***************************************************\
+						SIDEBAR
+	\***************************************************/
 	.sidebar{
 		padding-top: 100px;
 		transition-duration: 0.5s;
@@ -35,9 +127,9 @@
 			top: 4%;
 		}
 	}
-/***************************************************\
-					HOMEPAGE
-\***************************************************/
+	/***************************************************\
+						HOMEPAGE
+	\***************************************************/
 	.home{
 		.vector{
 			padding-top: 0%;
@@ -55,9 +147,9 @@
 			}
 		}
 	}
-/***************************************************\
-					PAGE PORTFOLIO
-\***************************************************/
+	/***************************************************\
+						PAGE PORTFOLIO
+	\***************************************************/
 	.creations{
 		.txtIntro p{
 			font-size: 1rem;
@@ -84,97 +176,120 @@
 			width: 40%;
 		}
 	}
-/***************************************************\
-				PAGE FCO + SWEETHOME
-\***************************************************/
-.content-pages{
-	.back{
-		right: 14px;
-		top: 12px;
-		display: block;
-		text-align: right;
-	}
-	.title{
-		img{
-			width: 70%;
-			margin-top: 5%;
+	/***************************************************\
+					PAGE FCO + SWEETHOME
+	\***************************************************/
+	.content-pages{
+		.back{
+			right: 14px;
+			top: 12px;
+			display: block;
+			text-align: right;
 		}
-		.price{
-			h2{
-				font-size: 1.6rem;
-			}
-		}
-	}
-	/********************************************************************************\
-					CONTEXTE
-	\********************************************************************************/
-	.context{
-		.context-block{
-			background: none;
-			width: 100%;
-			&:nth-child(odd){
-				left: 0%;
-				img{
-					top: -30px;
-					right: -6%;
-				}
-			}
-			&:nth-child(even){
-				left: 0%;
-				img{
-					top: -30px;
-					left: 65%;
-				}
-			}
+		.title{
 			img{
-				z-index: 1;
+				width: 70%;
+				margin-top: 5%;
 			}
-			.table2{
-				display: none;
+			.price{
+				h2{
+					font-size: 1.6rem;
+				}
 			}
 		}
-		.align-left{
-			left: 0%;
-		}
-		.align-right{
-			right: 0%;
-		}
-		.block-fco{
-			padding-bottom: 5%;
-			border: 3px solid #DDD;
-			margin-bottom: 5%;
-			.fco-text{
-				display: block;
+		/****************************************************\
+						CONTEXTE
+		\****************************************************/
+		.context{
+			.context-block{
+				background: none;
 				width: 100%;
+				&:nth-child(odd){
+					left: 0%;
+					img{
+						top: -30px;
+						right: -6%;
+					}
+				}
+				&:nth-child(even){
+					left: 0%;
+					img{
+						top: -30px;
+						left: 65%;
+					}
+				}
+				img{
+					z-index: 1;
+				}
+				.table2{
+					display: none;
+				}
+			}
+			.align-left{
+				left: 0%;
+			}
+			.align-right{
+				right: 0%;
+			}
+			.block-fco{
+				padding-bottom: 5%;
+				border: 3px solid #DDD;
+				margin-bottom: 5%;
+				.fco-text{
+					display: block;
+					width: 100%;
+				}
+			}
+			.context-side{
+				width: 100%;
+				height: 100%;
+				h3{
+					font-size: 1.3rem;
+				}
+				p{
+					padding: 5%;
+				}
 			}
 		}
-		.context-side{
-			width: 100%;
-			height: 100%;
-			h3{
-				font-size: 1.3rem;
+	}
+	/***************************************************\
+						LIGHTBOX
+	\***************************************************/
+	.lightbox{
+		.memory-sweet, .memory-fco{
+		padding-bottom: 10%;
+		width: 90%;
+		}
+		.polaroid1, .polaroid2, .polaroid3{
+			width: 80%;
+		}
+	}
+	/***************************************************\
+						MON PARCOURS
+	\***************************************************/
+	.career{
+		background: none;
+		height: $careerEventTop * 7;
+		.event{
+			width: 90%;
+			h5, p, li{
+				font-size: 1.1rem;
 			}
-			p{
-				padding: 5%;
+		}
+		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
+			.top{
+				.title{
+					padding: 2%;
+				}
+				.square{
+					padding: 1% 2%;
+				}
 			}
 		}
 	}
-}
-/***************************************************\
-					LIGHTBOX
-\***************************************************/
-.lightbox{
-	.memory-sweet, .memory-fco{
-	padding-bottom: 10%;
-	width: 90%;
-	}
-	.polaroid1, .polaroid2, .polaroid3{
-		width: 80%;
-	}
-}
-/***************************************************\
-					CONTACT
-\***************************************************/
+	/***************************************************\
+						CONTACT
+	\***************************************************/
 	.form-contacter{
 		margin: 10% auto;
 		overflow: initial;
@@ -234,7 +349,7 @@
 	/***************************************************\
 				ANIMATION CONTACT AU HOVER
 	\***************************************************/
-/*		&:hover .contact-top{
+	/*	&:hover .contact-top{
 			@include transform(rotateX(180deg));
 			bottom: -140px;
 			z-index: 25;
@@ -267,97 +382,17 @@
 			top: 500px;
 		}
 	}
-	/***************************************************\
-						MON PARCOURS
-	\***************************************************/
-	.career{
-		background: none;
-		height: $careerEventTop * 7;
-		.event{
-			width: 90%;
-			h5, p, li{
-				font-size: 1.1rem;
-			}
-		}
-		.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
-			.top{
-				.title{
-					height: 65px;
-					padding: 3% 4%;
-				}
-				.square{
-					padding: 1.5% 2.5%;
-					top: -10px;
-					right: -10px;
-					width: 55px;
-					height: 50px;
-					p{
-						font-size: 2rem;
-					}
-				}
-				.line{
-					display: none;
-				}
-				.circle{
-					display: none;
-				}
-				.date{
-					left: 12px;
-					top: 33px;
-					right: 0;
-				}
-			}
-			.body{
-				padding: 15px 20px;
-				p{
-					strong{
-						color: #676767;
-					}
-				}
-			}
-		}
-		.first{
-			margin-top: 50px;
-		}
-		.second{
-			margin-top: $careerEventTop * 1.85;
-		}
-		.third{
-			margin-top: $careerEventTop * 2.7;
-		}
-		.fourth{
-			margin-top: $careerEventTop * 3.9;
-		}
-		.fifth{
-			margin-top: $careerEventTop * 4.85;
-		}
-		.sixth{
-			margin-top: $careerEventTop * 5.94;
-		}
-		.seventh{
-			margin-top: $careerEventTop * 6.8;
-		}
-		.eighth{
-			margin-top: $careerEventTop * 7.65;
-		}
-		.left{
-			transform: translate(-50%, 0);
-		}
-		.right{
-			transform: translate(-50%, 0);
-		}
-	}
 }
-
 /******************************************************************************************************\
+********************************************************************************************************
 					RESPONSIVE LANDSCAPE
+********************************************************************************************************					
 \******************************************************************************************************/
-@media only screen  
-  and (max-device-height: 500px)
-  and (orientation: landscape){
-/***************************************************\
-					HOMEPAGE
-\***************************************************/
+@media only screen and (max-device-height: 500px)
+				   and (orientation: landscape){
+	/***************************************************\
+						HOMEPAGE
+	\***************************************************/
 	.content{
 		.home{
 			.vector{
@@ -380,9 +415,9 @@
 			}
 		}
 	}
-/***************************************************\
-					SIDEBAR
-\***************************************************/
+	/***************************************************\
+						SIDEBAR
+	\***************************************************/
 	.sidebar{
 		padding-top: 10px;
 		.menu{
@@ -404,9 +439,9 @@
 			}
 		}
 	}
-/***************************************************\
-					PAGE PORFOLIO
-\***************************************************/
+	/***************************************************\
+						PAGE PORFOLIO
+	\***************************************************/
 	.creations{
 		text-align: center;
 		#creation-1, #creation-2, #creation-3{
@@ -427,19 +462,12 @@
 			width: 40%;
 		}
 	}
-/***************************************************\
-					CONTACT
-\***************************************************/
+	/***************************************************\
+						CONTACT
+	\***************************************************/
 	.form-contacter{
-		/*transform: scale(1.5);*/
 		margin: 20% auto;
 		.contact{
-			&-background{
-				/*bottom: -200px;*/
-			}
-			&-top{
-				/*bottom: -205px;*/
-			}
 			&-bottom{
 				img{
 					display: block;	
