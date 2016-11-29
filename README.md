@@ -56,12 +56,12 @@ Créer un nouveau dossier nommé **CONFIG** et y crée un fichier `config_db.php
 
 Il ne reste plus qu'à crée une table nommée `faress_contact` dans votre base de donnée :
 
-CREATE TABLE IF NOT EXISTS 'faress_contact' (
-  'id' int(11) NOT NULL,
-  'name' varchar(63) NOT NULL,
-  'firstname' varchar(63) NOT NULL,
-  'mail' varchar(255) NOT NULL,
-  'object' varchar(63) NOT NULL,
-  'message' varchar(511) NOT NULL,
-  'date' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+`CREATE TABLE IF NOT EXISTS 'faress_contact' (
+'id' int(11) NOT NULL,
+'name' varchar(63) NOT NULL,
+'firstname' varchar(63) NOT NULL,
+'mail' varchar(255) NOT NULL,
+'object' varchar(63) NOT NULL,
+'message' varchar(511) NOT NULL,
+'date' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP)
+ENGINE=MyISAM DEFAULT CHARSET=utf8;`
