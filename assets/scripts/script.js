@@ -1,5 +1,5 @@
 (function() {
-	/*"use strict";*/
+	"use strict";
 	///////////////////////////////////////////////
 	// ONCLICK SUR SVG DE LA HOME
 	///////////////////////////////////////////////
@@ -71,7 +71,7 @@
 	    }
 	}
 	///////////////////////////////////////////////
-	// LIGHTBOX
+	// LIGHTBOX ESSAI 1
 	///////////////////////////////////////////////
 /*
 	var tab = {	
@@ -113,32 +113,67 @@
 		handleElement(tab[polaroid]);
 	}
 */
+	///////////////////////////////////////////////
+	// LIGHTBOX ESSAI 2
+	///////////////////////////////////////////////
+	/*function $(selector){
+	    this.element = document.getElementById(selector);
+	}
 
-function $(selector){
-    this.element = document.getElementById(selector);
-}
+	$.prototype.animate_zoom = function(classMove,zoom_item){
+	    var fade_el = document.getElementById('fade').classList,
+	        zoom_el = document.getElementById(zoom_item).classList;
+	    this.element.onclick = function(){
+	        zoom_el.remove(classMove.remove);
+	        zoom_el.add(classMove.add);
+	        fade_el.remove(classMove.remove);
+	        fade_el.add(classMove.add);
+	    }
+	}
+	var showing = {"remove":"isFade","add":"isShowing"},
+	    fading = {"remove":"isShowing","add":"isFade"};
 
-$.prototype.animate_zoom = function(classMove,zoom_item){
-    var fade_el = document.getElementById('fade').classList,
-        zoom_el = document.getElementById(zoom_item).classList;
-    this.element.onclick = function(){
-        zoom_el.remove(classMove.remove);
-        zoom_el.add(classMove.add);
-        fade_el.remove(classMove.remove);
-        fade_el.add(classMove.add);
-    }
-}
-var showing = {"remove":"isFade","add":"isShowing"},
-    fading = {"remove":"isShowing","add":"isFade"};
+	for ( i=1;i<4;i++ ){
+	    var polaroid_el = new $('polaroid'+i),
+	        zoom_el = new $('zoom'+i);
 
-for ( i=1;i<4;i++ ){
-    var polaroid_el = new $('polaroid'+i),
-        zoom_el = new $('zoom'+i);
+	    if ( polaroid_el && zoom_el ){
+	        polaroid_el.animate_zoom(showing,'zoom'+i);
+	        zoom_el.animate_zoom(fading,'zoom'+i);
+	    }
+	}*/
+	///////////////////////////////////////////////
+	// LIGHTBOX ESSAI 3
+	///////////////////////////////////////////////
+	// Définition de la fonction $
+	function $(selector){
+		// Si l'élement existe
+	    this.element = document.getElementById(selector);
 
-    if ( polaroid_el && zoom_el ){
-        polaroid_el.animate_zoom(showing,'zoom'+i);
-        zoom_el.animate_zoom(fading,'zoom'+i);
-    }
-}
+	}
+	// Définition de la méthode animate_zoom
+	$.prototype.animate_zoom = function(classMove){
+	    var zoom_class =  zoom_el.element.classList,
+		    fade_class =  fade.element.classList;
+	    this.element.onclick = function(){
+	        zoom_class.remove(classMove.remove);
+	        zoom_class.add(classMove.add);
+	        fade_class.remove(classMove.remove);
+	        fade_class.add(classMove.add);
+	    }
+	}
+	var showing = {"remove":"isFade","add":"isShowing"},
+	    fading = {"remove":"isShowing","add":"isFade"};
+	var fade =  new $('fade');
+	var i = 1;
+	while( i<4 ){
+	    var polaroid_el = new $('polaroid'+i),
+	        zoom_el = new $('zoom'+i);
+	    if(polaroid_el.element){
+	    	polaroid_el.animate_zoom(showing);
+	    	zoom_el.animate_zoom(fading);
+	    }
+	    i++
+	}
 
 })();

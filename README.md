@@ -34,3 +34,34 @@ Toutes les animations ont été réalisées en **CSS** et **JAVASCRIPT**. Expér
 Grâce à **Sass** le **CSS** n'a jamais été aussi cool, **variables** `$maCouleur = #FFF` et **mixins** `@mixin maBordure($maCouleur){ border-color: $maCouleur; color: $maCouleur;}` m'ont grandement facilités la tâche.
 
 Un peu de **SEO** (quelques **<meta>** et un **sitemap.xml**), un peu de **htAccess** (quelle galère avec **WAMP**) et de la motivation ont suffit pour donner... accès à mon portfolio.
+
+## Installation en 2 étapes
+
+# Étape 1
+
+Créer un nouveau dossier nommé **CONFIG** et y crée un fichier `config_db.php`, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
+`<?php
+	$config_online = [
+		'host' => 'localhost',
+		'port' => '3306',
+		'login' => 'login',
+		'password' => 'motDePasse',
+		'bdd' => 'nomDeLaBase',
+	];
+?>`
+
+Dé-commenter la 2 à 12 de `index.php`.
+
+# Étape 2
+
+Il ne reste plus qu'à crée une table nommée `faress_contact` dans votre base de donnée :
+
+CREATE TABLE IF NOT EXISTS `faress_contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(63) NOT NULL,
+  `firstname` varchar(63) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `object` varchar(63) NOT NULL,
+  `message` varchar(511) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

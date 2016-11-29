@@ -1,0 +1,52 @@
+<h1 id="pr-sentation-de-mon-portfolio">Présentation de mon Portfolio</h1>
+<p><em>Réalisé dans l&#39;optique de validation de la formation &quot;Développeur Intégrateur Web&quot; à la 3W Academy à Strasbourg.</em></p>
+<h3 id="-www-faress-webatt-fr-http-faress-webatt-fr-"><a href="http://faress.webatt.fr">www.faress.webatt.fr</a></h3>
+<h2 id="la-loi-des-5-les-technologies-indispensables-">La loi des 5 (les technologies indispensables):</h2>
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>PHP</li>
+<li>JAVASCRIPT</li>
+<li>SQL</li>
+</ol>
+<h2 id="d-pendances-day">Dépendances Day</h2>
+<p>Pour ce projet, j&#39;ai utilisé <strong>Bower (<a href="https://github.com/bower/bower/">Github bower</a>)</strong> en pensant avoir besoin de plusieurs dépendances, mais j&#39;ai finalement décidé de ne pas me disperser et de me limiter au strict nécessaire.</p>
+<p>Malgré toute l&#39;énergie investie dans le fonctionnement d&#39;une routine <strong>Gulp (<a href="https://github.com/bower/bower/">Github gulp</a>)</strong> pour compiler mes fichiers <strong>SCSS</strong> je me suis rabattu sur <strong>Prepros (<a href="https://github.com/Subash/Prepros/">Github prepros</a>)</strong> pensant qu&#39;il effectuais les pré-fixages Vendeurs... Oui mais non! J&#39;ai en définitive opté pour Prepros et une seule dépendance : <strong>Font-awesome (<a href="https://github.com/FortAwesome/Font-Awesome/">Github font-awesome</a>)</strong>.</p>
+<h2 id="outils-utilis-s">Outils utilisés</h2>
+<ul>
+<li>Sublime text</li>
+<li>Sass</li>
+<li>Prepros</li>
+<li>Github</li>
+<li>Photoshop</li>
+<li>Illustrator</li>
+<li><a href="https://google.com/">Google.com</a></li>
+</ul>
+<h2 id="du-blabla">Du Blabla</h2>
+<p>Toutes les animations ont été réalisées en <strong>CSS</strong> et <strong>JAVASCRIPT</strong>. Expérimentant la construction d&#39;un site de A à Z je n&#39;ai utilisé aucune librairies. Le peu de fonctionnalités mis en place ainsi que ma volonté de les coder moi même ne justifiait pas l&#39;utilisation de <strong>JQUERY</strong> par exemple.</p>
+<p>Grâce à <strong>Sass</strong> le <strong>CSS</strong> n&#39;a jamais été aussi cool, <strong>variables</strong> <code>$maCouleur = #FFF</code> et <strong>mixins</strong> <code>@mixin maBordure($maCouleur){ border-color: $maCouleur; color: $maCouleur;}</code> m&#39;ont grandement facilités la tâche.</p>
+<p>Un peu de <strong>SEO</strong> (quelques <strong><meta></strong> et un <strong>sitemap.xml</strong>), un peu de <strong>htAccess</strong> (quelle galère avec <strong>WAMP</strong>) et de la motivation ont suffit pour donner... accès à mon portfolio.</p>
+<h2 id="installation-en-2-tapes">Installation en 2 étapes</h2>
+<h1 id="-tape-1">Étape 1</h1>
+<p>Créer un nouveau dossier nommé <strong>CONFIG</strong> et y crée un fichier <code>config_db.php</code>, le tout à la racine du projet. Y placer ce code (en ajoutant biensûr vos informations:
+<code>&lt;?php
+    $config_online = [
+        &#39;host&#39; =&gt; &#39;localhost&#39;,
+        &#39;port&#39; =&gt; &#39;3306&#39;,
+        &#39;login&#39; =&gt; &#39;login&#39;,
+        &#39;password&#39; =&gt; &#39;motDePasse&#39;,
+        &#39;bdd&#39; =&gt; &#39;nomDeLaBase&#39;,
+    ];
+?&gt;</code></p>
+<p>Dé-commenter la 2 à 12 de <code>index.php</code>.</p>
+<h1 id="-tape-2">Étape 2</h1>
+<p>Il ne reste plus qu&#39;à crée une table nommée <code>faress_contact</code> dans votre base de donnée :</p>
+<p>CREATE TABLE IF NOT EXISTS <code>faress_contact</code> (
+  <code>id</code> int(11) NOT NULL,
+  <code>name</code> varchar(63) NOT NULL,
+  <code>firstname</code> varchar(63) NOT NULL,
+  <code>mail</code> varchar(255) NOT NULL,
+  <code>object</code> varchar(63) NOT NULL,
+  <code>message</code> varchar(511) NOT NULL,
+  <code>date</code> timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;</p>
